@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cash Memo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        min-height: 100vh;
+        background: #f8fafc;
+      }
+
+      .memo-card {
+        max-width: 900px;
+        width: 100%;
+        border: 0;
+        border-radius: 1.25rem;
+        box-shadow: 0 1rem 2.5rem rgba(15, 23, 42, 0.08);
+      }
+
+      .memo-title {
+        letter-spacing: 0.12rem;
+      }
+
+      .info-box {
+        background: #f8fafc;
+        border: 1px solid #dbeafe;
+        border-radius: 0.75rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container py-5">
+      <div class="d-flex justify-content-center">
+        <div class="card memo-card p-4 p-md-5">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <div>
+                <p class="text-primary fw-semibold mb-1">Shop Management</p>
+                <h1 class="h2 fw-bold memo-title mb-0">CASH MEMO</h1>
+              </div>
+              <a href="product-selection.html" class="btn btn-outline-secondary">
+                Back
+              </a>
+            </div>
+
+            <div class="row g-3 mb-4">
+              <div class="col-12 col-md-6">
+                <div class="info-box p-3">
+                  <strong>Name:</strong> <span id="memo-name">-</span>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="info-box p-3">
+                  <strong>Phone:</strong> <span id="memo-phone">-</span>
+                </div>
+              </div>
+              <div class="col-12 col-md-8">
+                <div class="info-box p-3">
+                  <strong>Address:</strong> <span id="memo-address">-</span>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="info-box p-3">
+                  <strong>Date:</strong> <span id="memo-date">-</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="table-responsive mb-4">
+              <table class="table table-bordered align-middle mb-0">
+                <thead class="table-light">
+                  <tr>
+                    <th>Description</th>
+                    <th>Cost</th>
+                    <th>Total</th>
+                  </tr>
+                </thead>
+                <tbody id="memo-items"></tbody>
+              </table>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const clientData = JSON.parse(localStorage.getItem("shopClientData") || "{}");
+      const productData = JSON.parse(localStorage.getItem("shopProductData") || "{}");
+
+      const setText = (id, value) => {
+        document.getElementById(id).textContent = value || "-";
+      };
+
+      setText("memo-name", clientData.name);
+      setText("memo-phone", clientData.phone);
+      setText("memo-address", clientData.address);
+      setText("memo-date", new Date().toLocaleDateString());
+
+      const memoItems = document.getElementById("memo-items");
+      const rows = [];
+
+      if (productData.productName) {
+        rows.push({
+          description: `${productData.productName} (${productData.unitLabel})`,
+          cost: productData.unitCost || "-",
+          total: productData.totalCost || "-",
+        });
+      }
+
+      if (productData.otherExpense) {
+        rows.push({
+          description: "Other expense",
+          cost: productData.otherExpense,
+          total: productData.otherExpense,
+        });
+      }
+
+      if (productData.cost) {
+        rows.push({
+          description: "cost",
+          cost: productData.cost,
+          total: productData.cost,
+        });
+      }
+
+      memoItems.innerHTML = rows
+        .map(
+          (row) => `
+            <tr>
+              <td>${row.description}</td>
+              <td>${row.cost}</td>
+              <td>${row.total}</td>
+            </tr>
+          `,
+        )
+        .join("");
+
+    </script>
+  </body>
+</html>

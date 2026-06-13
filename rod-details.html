@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rod Details</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #f8fafc, #ede9fe);
+      }
+
+      .details-card {
+        max-width: 720px;
+        width: 100%;
+        border: 0;
+        border-radius: 1.25rem;
+        box-shadow: 0 1rem 2.5rem rgba(15, 23, 42, 0.12);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container py-5">
+      <div class="row min-vh-100 align-items-center justify-content-center">
+        <div class="col-12 d-flex justify-content-center">
+          <div class="card details-card p-4 p-md-5">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-4">
+                <h1 class="h2 fw-bold mb-0">Rod Details</h1>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="window.history.back()"
+                >
+                  Back
+                </button>
+              </div>
+
+              <form id="rod-form">
+                <div class="row g-3">
+                  <div class="col-12 col-md-6">
+                    <label for="rod-size" class="form-label">R-size</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="rod-size"
+                      placeholder="Enter rod size"
+                    />
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="price-ton" class="form-label">Price/ton</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="price-ton"
+                      placeholder="Enter price per ton"
+                    />
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="total-weight" class="form-label">Total Weight</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="total-weight"
+                      placeholder="Enter total weight"
+                    />
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="total-cost" class="form-label">Total cost</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="total-cost"
+                      placeholder="Enter total cost"
+                    />
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="other-expense-rod" class="form-label">Other expense</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="other-expense-rod"
+                      placeholder="Enter other expense"
+                    />
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="rod-cost" class="form-label">cost</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="rod-cost"
+                      placeholder="Enter cost"
+                    />
+                  </div>
+                  <div class="col-12">
+                    <label for="rod-brand" class="form-label">rod brand</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="rod-brand"
+                      placeholder="Enter rod brand"
+                    />
+                  </div>
+                </div>
+              </form>
+
+              <div class="d-flex justify-content-between gap-2 mt-4">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="window.history.back()"
+                >
+                  Close
+                </button>
+                <button type="submit" form="rod-form" class="btn btn-primary">
+                  Save Rod
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const redirectToCashMemo = (data) => {
+        localStorage.setItem("shopProductData", JSON.stringify(data));
+        window.location.href = "cash-memo.html";
+      };
+
+      document.getElementById("rod-form").addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        redirectToCashMemo({
+          productName: "Rod",
+          unitLabel: "Price/ton",
+          unitCost: document.getElementById("price-ton").value,
+          totalCost: document.getElementById("total-cost").value,
+          otherExpense: document.getElementById("other-expense-rod").value,
+          cost: document.getElementById("rod-cost").value,
+          details: [
+            { label: "R-size", value: document.getElementById("rod-size").value },
+            { label: "Total Weight", value: document.getElementById("total-weight").value },
+            { label: "rod brand", value: document.getElementById("rod-brand").value },
+          ],
+        });
+      });
+    </script>
+  </body>
+</html>
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

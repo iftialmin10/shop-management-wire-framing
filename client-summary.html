@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client Summary</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+      }
+
+      .summary-card {
+        border: 0;
+        border-radius: 1.25rem;
+        box-shadow: 0 1rem 2.5rem rgba(15, 23, 42, 0.1);
+      }
+
+      .info-panel {
+        border: 1px solid #dbeafe;
+        border-radius: 1rem;
+        background: #f8fbff;
+      }
+      .status.deposit {
+        color: #198754;
+        font-weight: 600;
+      }
+
+      .status.spend {
+        color: #dc3545;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container py-5">
+      <div class="card summary-card p-4 p-md-5">
+        <div class="card-body">
+          <div class="mb-4">
+            <div class="d-flex align-items-center justify-content-between mb-4">
+              <h1 class="h2 fw-bold mb-0">Client Summary</h1>
+              <button
+                type="button"
+                class="btn btn-outline-secondary"
+                id="edit-client-btn"
+                onclick="window.location.href = 'edit-client.html'"
+              >
+                Edit
+              </button>
+            </div>
+            <div class="row g-3">
+              <div class="col-12 col-md-3">
+                <div class="info-panel p-3">
+                  <strong>Client Name:</strong>
+                  <span id="summary-name">Abdul Motin</span>
+                </div>
+              </div>
+              <div class="col-12 col-md-3">
+                <div class="info-panel p-3">
+                  <strong>Phone:</strong>
+                  <span id="summary-phone">01999999</span>
+                </div>
+              </div>
+              <div class="col-12 col-md-3">
+                <div class="info-panel p-3">
+                  <strong>Address:</strong>
+                  <span id="summary-address">Rampura</span>
+                </div>
+              </div>
+              <div class="col-12 col-md-3">
+                <div class="info-panel p-3">
+                  <strong>Reference:</strong>
+                  <span id="summary-reference">Mia, Kazipara</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-panel p-4 mb-4">
+            <div class="row g-3 text-center">
+              <div class="col-12 col-md-4">
+                <p class="text-muted mb-1">Total deposit</p>
+                <p class="h4 fw-bold mb-0">100000tk</p>
+              </div>
+              <div class="col-12 col-md-4">
+                <p class="text-muted mb-1">Total debt</p>
+                <p class="h4 fw-bold mb-0">100000tk</p>
+              </div>
+              <div class="col-12 col-md-4">
+                <p class="text-muted mb-1">Total Use</p>
+                <p class="h4 fw-bold mb-0">200000tk</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3 d-flex flex-wrap gap-2">
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="new-purchase-btn"
+              onclick="window.location.href = 'product-selection.html'"
+            >
+              New Purchase
+            </button>
+            <button
+              type="button"
+              class="btn btn-success"
+              id="new-deposit-btn"
+              onclick="window.location.href = 'new-deposit.html'"
+            >
+              New Deposit
+            </button>
+          </div>
+
+          <div class="table-responsive mb-4">
+            <table class="table table-bordered table-striped align-middle mb-0">
+              <thead class="table-light">
+                <tr>
+                  <th>Date</th>
+                  <th>Description</th>
+                  <th>Taka</th>
+                  <th style="color: #000">Transaction type</th>
+                  <th style="color: #000">Edit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>10/12/25</td>
+                  <td>By Cash</td>
+                  <td>10000</td>
+                  <td>Deposit</td>
+                  <td>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                      onclick="window.location.href = 'edit-transaction.html'"
+                    >
+                      Edit
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>12/12/25</td>
+                  <td>Rod-16,12 -900kg</td>
+                  <td>12000</td>
+                  <td>4000</td>
+                  <td>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                      onclick="window.location.href = 'edit-transaction.html'"
+                    >
+                      Edit
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>13/12/25</td>
+                  <td>Cement Premium -40 bag</td>
+                  <td>18000</td>
+                  <td>5000</td>
+                  <td>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                      onclick="window.location.href = 'edit-cement.html'"
+                    >
+                      Edit
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>15/12/25</td>
+                  <td>Rod-10 -500kg</td>
+                  <td>9000</td>
+                  <td>2500</td>
+                  <td>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                      onclick="window.location.href = 'edit-transaction.html'"
+                    >
+                      Edit
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <button
+              type="button"
+              class="btn btn-outline-primary"
+              onclick="window.print()"
+            >
+              Print
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              onclick="window.location.href = 'client-history.html'"
+            >
+              Back
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const clientData = JSON.parse(
+          localStorage.getItem("shopClientData") || "{}",
+        );
+
+        const summaryName = document.getElementById("summary-name");
+        const summaryPhone = document.getElementById("summary-phone");
+        const summaryAddress = document.getElementById("summary-address");
+        const summaryReference = document.getElementById("summary-reference");
+
+        if (summaryName && clientData.name) summaryName.textContent = clientData.name;
+        if (summaryPhone && clientData.phone) summaryPhone.textContent = clientData.phone;
+        if (summaryAddress && clientData.address)
+          summaryAddress.textContent = clientData.address;
+        if (summaryReference && clientData.reference)
+          summaryReference.textContent = clientData.reference;
+
+        const tbody = document.querySelector("table tbody");
+        if (tbody) {
+          const rows = Array.from(tbody.querySelectorAll("tr"));
+
+          const parseDate = (s) => {
+            const parts = s.trim().split("/");
+            if (parts.length !== 3) return new Date(0);
+            const day = parseInt(parts[0], 10);
+            const month = parseInt(parts[1], 10) - 1;
+            let year = parseInt(parts[2], 10);
+            year += year < 100 ? 2000 : 0;
+            return new Date(year, month, day);
+          };
+
+          rows.sort((a, b) => {
+            const aDateText =
+              (a.querySelectorAll("td")[0] || {}).textContent || "";
+            const bDateText =
+              (b.querySelectorAll("td")[0] || {}).textContent || "";
+            const aDate = parseDate(aDateText);
+            const bDate = parseDate(bDateText);
+            return bDate - aDate; // most recent first
+          });
+
+          // Re-append rows in sorted order
+          rows.forEach((r) => tbody.appendChild(r));
+
+          // Now convert status cells to labels with color
+          Array.from(tbody.querySelectorAll("tr")).forEach((row) => {
+            const cells = row.querySelectorAll("td");
+            if (cells.length < 4) return;
+
+            const cell = cells[3];
+            const text = cell.textContent.trim();
+            const num = parseFloat(text.replace(/[,\s]+/g, ""));
+            let status = "";
+
+            if (!isNaN(num)) {
+              status = num > 0 ? "Spend" : "deposit";
+            } else {
+              const t = text.toLowerCase();
+              if (t.includes("deposit")) status = "deposit";
+              else if (t.includes("spend")) status = "Spend";
+            }
+
+            if (status) {
+              const span = document.createElement("span");
+              span.className =
+                "status " +
+                (status.toLowerCase() === "deposit" ? "deposit" : "spend");
+              span.textContent = status;
+              cell.textContent = "";
+              cell.appendChild(span);
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

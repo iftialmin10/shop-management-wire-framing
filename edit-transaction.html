@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Transaction</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #eff6ff, #f8fafc);
+      }
+
+      .transaction-card {
+        max-width: 860px;
+        width: 100%;
+        border: 0;
+        border-radius: 1.25rem;
+        box-shadow: 0 1rem 2.5rem rgba(15, 23, 42, 0.12);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container py-5">
+      <div class="row min-vh-100 align-items-center justify-content-center">
+        <div class="col-12 d-flex justify-content-center">
+          <div class="card transaction-card p-4 p-md-5">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                  <h1 class="h2 fw-bold mb-1">Edit Transaction</h1>
+                  <p class="text-muted mb-0">Update the transaction details below.</p>
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="window.location.href = 'client-summary.html'"
+                >
+                  Back
+                </button>
+              </div>
+
+              <form id="transaction-form">
+                <div class="row g-3">
+                  <div class="col-12 col-md-6">
+                    <label for="r-size" class="form-label">R-size</label>
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      id="r-size"
+                      placeholder="Enter R-size"
+                      value="Rod-16,12"
+                    />
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <label for="price-per-ton" class="form-label">Price/ton</label>
+                    <input
+                      type="number"
+                      class="form-control form-control-lg"
+                      id="price-per-ton"
+                      placeholder="Enter price per ton"
+                      value="12000"
+                    />
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <label for="total-weight" class="form-label">Total Weight</label>
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      id="total-weight"
+                      placeholder="Enter total weight"
+                      value="900kg"
+                    />
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <label for="total-cost" class="form-label">Total cost</label>
+                    <input
+                      type="number"
+                      class="form-control form-control-lg"
+                      id="total-cost"
+                      placeholder="Enter total cost"
+                      value="18000"
+                    />
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <label for="other-expenses" class="form-label">Other expenses</label>
+                    <input
+                      type="number"
+                      class="form-control form-control-lg"
+                      id="other-expenses"
+                      placeholder="Enter other expenses"
+                      value="500"
+                    />
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <label for="cost" class="form-label">Cost</label>
+                    <input
+                      type="number"
+                      class="form-control form-control-lg"
+                      id="cost"
+                      placeholder="Enter cost"
+                      value="18500"
+                    />
+                  </div>
+
+                  <div class="col-12">
+                    <label for="rod-brand" class="form-label">Rod brand</label>
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      id="rod-brand"
+                      placeholder="Enter rod brand"
+                      value="Premium"
+                    />
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                  <button
+                    type="button"
+                    class="btn btn-outline-danger btn-lg"
+                    id="delete-transaction-btn"
+                  >
+                    Delete
+                  </button>
+                  <button type="submit" class="btn btn-primary btn-lg">
+                    Save
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaA55NDzOxhy9GkcIdslK1N7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const transactionForm = document.getElementById("transaction-form");
+
+      transactionForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const transactionData = {
+          rSize: document.getElementById("r-size").value,
+          pricePerTon: document.getElementById("price-per-ton").value,
+          totalWeight: document.getElementById("total-weight").value,
+          totalCost: document.getElementById("total-cost").value,
+          otherExpenses: document.getElementById("other-expenses").value,
+          cost: document.getElementById("cost").value,
+          rodBrand: document.getElementById("rod-brand").value,
+        };
+
+        localStorage.setItem("shopTransactionData", JSON.stringify(transactionData));
+        window.location.href = "client-summary.html";
+      });
+
+      document.getElementById("delete-transaction-btn").addEventListener("click", () => {
+        localStorage.removeItem("shopTransactionData");
+        window.location.href = "client-summary.html";
+      });
+    </script>
+  </body>
+</html>
