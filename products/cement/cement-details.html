@@ -33,9 +33,12 @@
         <div class="card-body">
           <div class="d-flex justify-content-between align-items-center mb-4">
             <h1 class="h2 fw-bold mb-0">Cement Store Details</h1>
-            <a href="../product-details.html" class="btn btn-outline-secondary">
-              Back
-            </a>
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-success">+</button>
+              <a href="../product-details.html" class="btn btn-outline-secondary">
+                Back
+              </a>
+            </div>
           </div>
 
           <div class="table-responsive">
@@ -54,7 +57,16 @@
                   onclick="window.location.href = 'cement-stock.html'"
                 >
                   <td>SevenRings</td>
-                  <td>BM</td>
+                  <td>
+                    <select
+                      class="form-select form-select-sm"
+                      onclick="event.stopPropagation()"
+                    >
+                      <option selected>BM</option>
+                      <option>AM</option>
+                      <option>OPC</option>
+                    </select>
+                  </td>
                   <td>300</td>
                   <td>
                     <a
@@ -71,7 +83,16 @@
                   onclick="window.location.href = 'cement-stock.html'"
                 >
                   <td>SevenRings</td>
-                  <td>AM</td>
+                  <td>
+                    <select
+                      class="form-select form-select-sm"
+                      onclick="event.stopPropagation()"
+                    >
+                      <option>BM</option>
+                      <option selected>AM</option>
+                      <option>OPC</option>
+                    </select>
+                  </td>
                   <td>500</td>
                   <td>
                     <a
@@ -88,7 +109,16 @@
                   onclick="window.location.href = 'cement-stock.html'"
                 >
                   <td>SevenRings</td>
-                  <td>OPC</td>
+                  <td>
+                    <select
+                      class="form-select form-select-sm"
+                      onclick="event.stopPropagation()"
+                    >
+                      <option>BM</option>
+                      <option>AM</option>
+                      <option selected>OPC</option>
+                    </select>
+                  </td>
                   <td>600</td>
                   <td>
                     <a
