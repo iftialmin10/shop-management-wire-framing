@@ -32,7 +32,9 @@
           <div class="card edit-card p-4 p-md-5">
             <div class="card-body">
               <div class="mb-4">
-                <div class="d-flex justify-content-between align-items-start gap-3">
+                <div
+                  class="d-flex justify-content-between align-items-start gap-3"
+                >
                   <div>
                     <h1 class="h2 fw-bold mb-1">Edit Cement</h1>
                     <p class="text-muted mb-0">
@@ -42,7 +44,9 @@
                   <button
                     type="button"
                     class="btn btn-outline-secondary"
-                    onclick="window.location.href = '../clients/client-summary.html'"
+                    onclick="
+                      window.location.href = '../clients/client-summary.html'
+                    "
                   >
                     Back
                   </button>
@@ -116,14 +120,27 @@
                       >other expense</label
                     >
                     <input
-                      type="number"
+                      type="text"
                       class="form-control form-control-lg"
                       id="other-expense"
                       placeholder="Enter other expense"
+                      value="Carrying cost"
                     />
                   </div>
 
-                  <div class="col-12">
+                  <div class="col-12 col-md-6">
+                    <label for="other-expense-cost" class="form-label">
+                      other expense cost
+                    </label>
+                    <input
+                      type="number"
+                      class="form-control form-control-lg"
+                      id="other-expense-cost"
+                      placeholder="Enter other expense cost"
+                    />
+                  </div>
+
+                  <div class="col-12 col-md-6">
                     <label for="cost" class="form-label">cost</label>
                     <input
                       type="number"
@@ -134,7 +151,9 @@
                   </div>
                 </div>
 
-                <div class="d-flex justify-content-between align-items-center mt-4">
+                <div
+                  class="d-flex justify-content-between align-items-center mt-4"
+                >
                   <button
                     type="button"
                     class="btn btn-outline-danger btn-lg"
@@ -165,7 +184,8 @@
         cementCategory: "BM",
         totalCementBag: "40",
         totalPrice: "18000",
-        otherExpense: "500",
+        otherExpense: "Carrying cost",
+        otherExpenseCost: "500",
         cost: "18500",
       };
 
@@ -184,8 +204,13 @@
       document.getElementById("total-price").value =
         cementData.totalPrice || defaultCementData.totalPrice;
       document.getElementById("other-expense").value =
-        cementData.otherExpense || defaultCementData.otherExpense;
-      document.getElementById("cost").value = cementData.cost || defaultCementData.cost;
+        cementData.otherExpense && isNaN(Number(cementData.otherExpense))
+          ? cementData.otherExpense
+          : defaultCementData.otherExpense;
+      document.getElementById("other-expense-cost").value =
+        cementData.otherExpenseCost || defaultCementData.otherExpenseCost;
+      document.getElementById("cost").value =
+        cementData.cost || defaultCementData.cost;
 
       document
         .getElementById("edit-cement-form")
@@ -199,17 +224,24 @@
             totalCementBag: document.getElementById("total-cement-bag").value,
             totalPrice: document.getElementById("total-price").value,
             otherExpense: document.getElementById("other-expense").value,
+            otherExpenseCost:
+              document.getElementById("other-expense-cost").value,
             cost: document.getElementById("cost").value,
           };
 
-          localStorage.setItem("shopCementData", JSON.stringify(updatedCementData));
+          localStorage.setItem(
+            "shopCementData",
+            JSON.stringify(updatedCementData),
+          );
           window.location.href = "../clients/client-summary.html";
         });
 
-      document.getElementById("delete-cement-btn").addEventListener("click", () => {
-        localStorage.removeItem("shopCementData");
-        window.location.href = "../clients/client-summary.html";
-      });
+      document
+        .getElementById("delete-cement-btn")
+        .addEventListener("click", () => {
+          localStorage.removeItem("shopCementData");
+          window.location.href = "../clients/client-summary.html";
+        });
     </script>
   </body>
 </html>

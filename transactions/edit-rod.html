@@ -106,10 +106,23 @@
                       >Other expenses</label
                     >
                     <input
-                      type="number"
+                      type="text"
                       class="form-control form-control-lg"
                       id="other-expenses"
                       placeholder="Enter other expenses"
+                      value="Carrying Cost"
+                    />
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <label for="other-expense-cost" class="form-label">
+                      Other expense Cost
+                    </label>
+                    <input
+                      type="number"
+                      class="form-control form-control-lg"
+                      id="other-expense-cost"
+                      placeholder="Enter other expense cost"
                       value="500"
                     />
                   </div>
@@ -175,6 +188,7 @@
           totalWeight: document.getElementById("total-weight").value,
           totalCost: document.getElementById("total-cost").value,
           otherExpenses: document.getElementById("other-expenses").value,
+          otherExpenseCost: document.getElementById("other-expense-cost").value,
           cost: document.getElementById("cost").value,
           rodBrand: document.getElementById("rod-brand").value,
         };
