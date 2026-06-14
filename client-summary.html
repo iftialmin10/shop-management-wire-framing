@@ -86,15 +86,15 @@
             <div class="row g-3 text-center">
               <div class="col-12 col-md-4">
                 <p class="text-muted mb-1">Total deposit</p>
-                <p class="h4 fw-bold mb-0">100000tk</p>
+                <p class="h4 fw-bold mb-0">8500tk</p>
               </div>
               <div class="col-12 col-md-4">
                 <p class="text-muted mb-1">Total debt</p>
-                <p class="h4 fw-bold mb-0">100000tk</p>
+                <p class="h4 fw-bold mb-0">11700tk</p>
               </div>
               <div class="col-12 col-md-4">
                 <p class="text-muted mb-1">Total Use</p>
-                <p class="h4 fw-bold mb-0">200000tk</p>
+                <p class="h4 fw-bold mb-0">20200tk</p>
               </div>
             </div>
           </div>
@@ -116,6 +116,20 @@
             >
               New Deposit
             </button>
+            <input
+              type="date"
+              class="form-control"
+              id="memo-date"
+              style="max-width: 180px"
+              aria-label="Cash memo date"
+            />
+            <button
+              type="button"
+              class="btn btn-outline-primary"
+              id="cash-memo-btn"
+            >
+              Cash memo
+            </button>
           </div>
 
           <div class="table-responsive mb-4">
@@ -131,9 +145,54 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>10/12/25</td>
-                  <td>By Cash</td>
-                  <td>10000</td>
+                  <td>15/05/25</td>
+                  <td>Rod 16 KSRM 700kg</td>
+                  <td>10500</td>
+                  <td>Spend</td>
+                  <td>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                      onclick="window.location.href = 'edit-deposit.html'"
+                    >
+                      Edit
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>15/05/25</td>
+                  <td>Cement 100bag</td>
+                  <td>3000</td>
+                  <td>Spend</td>
+                  <td>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                      onclick="window.location.href = 'edit-deposit.html'"
+                    >
+                      Edit
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>15/05/25</td>
+                  <td>past</td>
+                  <td>5000</td>
+                  <td>Spend</td>
+                  <td>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                      onclick="window.location.href = 'edit-deposit.html'"
+                    >
+                      Edit
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>15/12/25</td>
+                  <td>By cash</td>
+                  <td>6000</td>
                   <td>Deposit</td>
                   <td>
                     <button
@@ -146,30 +205,15 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>12/12/25</td>
-                  <td>Rod-16,12 -900kg</td>
-                  <td>12000</td>
-                  <td>4000</td>
+                  <td>19/12/25</td>
+                  <td>By cash</td>
+                  <td>2500</td>
+                  <td>Deposit</td>
                   <td>
                     <button
                       type="button"
                       class="btn btn-sm btn-outline-secondary"
-                      onclick="window.location.href = 'edit-transaction.html'"
-                    >
-                      Edit
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>13/12/25</td>
-                  <td>Cement Premium -40 bag</td>
-                  <td>18000</td>
-                  <td>5000</td>
-                  <td>
-                    <button
-                      type="button"
-                      class="btn btn-sm btn-outline-secondary"
-                      onclick="window.location.href = 'edit-cement.html'"
+                      onclick="window.location.href = 'edit-deposit.html'"
                     >
                       Edit
                     </button>
@@ -177,14 +221,14 @@
                 </tr>
                 <tr>
                   <td>15/12/25</td>
-                  <td>Rod-10 -500kg</td>
-                  <td>9000</td>
-                  <td>2500</td>
+                  <td>Cement 50bag</td>
+                  <td>1700</td>
+                  <td>Spend</td>
                   <td>
                     <button
                       type="button"
                       class="btn btn-sm btn-outline-secondary"
-                      onclick="window.location.href = 'edit-transaction.html'"
+                      onclick="window.location.href = 'edit-deposit.html'"
                     >
                       Edit
                     </button>
@@ -230,8 +274,10 @@
         const summaryAddress = document.getElementById("summary-address");
         const summaryReference = document.getElementById("summary-reference");
 
-        if (summaryName && clientData.name) summaryName.textContent = clientData.name;
-        if (summaryPhone && clientData.phone) summaryPhone.textContent = clientData.phone;
+        if (summaryName && clientData.name)
+          summaryName.textContent = clientData.name;
+        if (summaryPhone && clientData.phone)
+          summaryPhone.textContent = clientData.phone;
         if (summaryAddress && clientData.address)
           summaryAddress.textContent = clientData.address;
         if (summaryReference && clientData.reference)

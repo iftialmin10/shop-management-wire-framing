@@ -45,6 +45,14 @@
               <form id="rod-form">
                 <div class="row g-3">
                   <div class="col-12 col-md-6">
+                    <label for="rod-date" class="form-label">Date</label>
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="rod-date"
+                    />
+                  </div>
+                  <div class="col-12 col-md-6">
                     <label for="rod-size" class="form-label">R-size</label>
                     <input
                       type="text"
@@ -136,7 +144,7 @@
     <script>
       const redirectToCashMemo = (data) => {
         localStorage.setItem("shopProductData", JSON.stringify(data));
-        window.location.href = "cash-memo.html";
+        window.location.href = "client-summary.html";
       };
 
       document.getElementById("rod-form").addEventListener("submit", (event) => {
@@ -150,6 +158,7 @@
           otherExpense: document.getElementById("other-expense-rod").value,
           cost: document.getElementById("rod-cost").value,
           details: [
+            { label: "Date", value: document.getElementById("rod-date").value },
             { label: "R-size", value: document.getElementById("rod-size").value },
             { label: "Total Weight", value: document.getElementById("total-weight").value },
             { label: "rod brand", value: document.getElementById("rod-brand").value },

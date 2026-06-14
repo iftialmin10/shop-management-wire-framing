@@ -47,6 +47,14 @@
               <form id="cement-form">
                 <div class="row g-3">
                   <div class="col-12 col-md-6">
+                    <label for="cement-date" class="form-label">Date</label>
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="cement-date"
+                    />
+                  </div>
+                  <div class="col-12 col-md-6">
                     <label for="cement-brand" class="form-label"
                       >cement Brand</label
                     >
@@ -154,7 +162,7 @@
     <script>
       const redirectToCashMemo = (data) => {
         localStorage.setItem("shopProductData", JSON.stringify(data));
-        window.location.href = "cash-memo.html";
+        window.location.href = "client-summary.html";
       };
 
       document
@@ -170,6 +178,10 @@
             otherExpense: document.getElementById("other-expense-cement").value,
             cost: document.getElementById("cement-cost").value,
             details: [
+              {
+                label: "Date",
+                value: document.getElementById("cement-date").value,
+              },
               {
                 label: "cement Brand",
                 value: document.getElementById("cement-brand").value,
