@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Other Expense</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #f8fafc, #fff7ed);
+      }
+
+      .expense-card {
+        max-width: 720px;
+        width: 100%;
+        border: 0;
+        border-radius: 1.25rem;
+        box-shadow: 0 1rem 2.5rem rgba(15, 23, 42, 0.12);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container py-5">
+      <div class="row min-vh-100 align-items-center justify-content-center">
+        <div class="col-12 d-flex justify-content-center">
+          <div class="card expense-card p-4 p-md-5">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start gap-3 mb-4">
+                <div>
+                  <h1 class="h2 fw-bold mb-1">Edit Other Expense</h1>
+                  <p class="text-muted mb-0">Update the expense details below.</p>
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="window.location.href = '../clients/client-summary.html'"
+                >
+                  Back
+                </button>
+              </div>
+
+              <form id="other-expense-form">
+                <div class="row g-3">
+                  <div class="col-12 col-md-4">
+                    <label for="expense-date" class="form-label">Date</label>
+                    <input
+                      type="date"
+                      class="form-control form-control-lg"
+                      id="expense-date"
+                    />
+                  </div>
+
+                  <div class="col-12 col-md-4">
+                    <label for="expense-description" class="form-label"
+                      >Description</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      id="expense-description"
+                      placeholder="Enter description"
+                    />
+                  </div>
+
+                  <div class="col-12 col-md-4">
+                    <label for="expense-taka" class="form-label">Taka</label>
+                    <input
+                      type="number"
+                      class="form-control form-control-lg"
+                      id="expense-taka"
+                      placeholder="Enter taka"
+                    />
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                  <button
+                    type="button"
+                    class="btn btn-outline-danger btn-lg"
+                    id="delete-expense-btn"
+                  >
+                    Delete
+                  </button>
+                  <button type="submit" class="btn btn-success btn-lg">
+                    Save
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1N7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const defaultExpenseData = {
+        date: "",
+        description: "",
+        taka: "",
+      };
+
+      const expenseData = JSON.parse(
+        localStorage.getItem("shopOtherExpenseData") || "{}",
+      );
+
+      document.getElementById("expense-date").value =
+        expenseData.date || defaultExpenseData.date;
+      document.getElementById("expense-description").value =
+        expenseData.description || defaultExpenseData.description;
+      document.getElementById("expense-taka").value =
+        expenseData.taka || defaultExpenseData.taka;
+
+      document
+        .getElementById("other-expense-form")
+        .addEventListener("submit", (event) => {
+          event.preventDefault();
+
+          const updatedExpenseData = {
+            date: document.getElementById("expense-date").value,
+            description: document.getElementById("expense-description").value,
+            taka: document.getElementById("expense-taka").value,
+          };
+
+          localStorage.setItem(
+            "shopOtherExpenseData",
+            JSON.stringify(updatedExpenseData),
+          );
+          window.location.href = "../clients/client-summary.html";
+        });
+
+      document.getElementById("delete-expense-btn").addEventListener("click", () => {
+        localStorage.removeItem("shopOtherExpenseData");
+        window.location.href = "../clients/client-summary.html";
+      });
+    </script>
+  </body>
+</html>
