@@ -1,4 +1,4 @@
-cls-id,date,description,taka
-1,12/12/12,byCash,2500
-2,15/08/11,cement,1700
-3,16/08/19,rod,2000
+cl-id,cls-id,date,description,taka
+1,1,1750016640,byCash,2500
+2,2,1750016640,cement,1700
+1,3,1750016640,rod,2000
