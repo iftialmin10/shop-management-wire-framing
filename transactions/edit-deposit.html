@@ -42,7 +42,7 @@
                   <button
                     type="button"
                     class="btn btn-outline-secondary"
-                    onclick="window.location.href = 'client-summary.html'"
+                    onclick="window.location.href = '../clients/client-summary.html'"
                   >
                     Back
                   </button>
@@ -138,12 +138,12 @@
           };
 
           localStorage.setItem("shopDepositData", JSON.stringify(updatedDepositData));
-          window.location.href = "client-summary.html";
+          window.location.href = "../clients/client-summary.html";
         });
 
       document.getElementById("delete-deposit-btn").addEventListener("click", () => {
         localStorage.removeItem("shopDepositData");
-        window.location.href = "client-summary.html";
+        window.location.href = "../clients/client-summary.html";
       });
     </script>
   </body>

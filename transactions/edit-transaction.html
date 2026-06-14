@@ -39,7 +39,7 @@
                 <button
                   type="button"
                   class="btn btn-outline-secondary"
-                  onclick="window.location.href = 'client-summary.html'"
+                  onclick="window.location.href = '../clients/client-summary.html'"
                 >
                   Back
                 </button>
@@ -166,12 +166,12 @@
         };
 
         localStorage.setItem("shopTransactionData", JSON.stringify(transactionData));
-        window.location.href = "client-summary.html";
+        window.location.href = "../clients/client-summary.html";
       });
 
       document.getElementById("delete-transaction-btn").addEventListener("click", () => {
         localStorage.removeItem("shopTransactionData");
-        window.location.href = "client-summary.html";
+        window.location.href = "../clients/client-summary.html";
       });
     </script>
   </body>

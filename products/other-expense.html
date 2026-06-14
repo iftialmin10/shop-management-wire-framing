@@ -136,12 +136,12 @@
             "shopOtherExpenseData",
             JSON.stringify(updatedExpenseData),
           );
-          window.location.href = "client-summary.html";
+          window.location.href = "../clients/client-summary.html";
         });
 
       document.getElementById("delete-expense-btn").addEventListener("click", () => {
         localStorage.removeItem("shopOtherExpenseData");
-        window.location.href = "client-summary.html";
+        window.location.href = "../clients/client-summary.html";
       });
     </script>
   </body>

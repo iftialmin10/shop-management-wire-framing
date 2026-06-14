@@ -42,7 +42,7 @@
                   <button
                     type="button"
                     class="btn btn-outline-secondary"
-                    onclick="window.location.href = 'client-summary.html'"
+                    onclick="window.location.href = '../clients/client-summary.html'"
                   >
                     Back
                   </button>
@@ -203,12 +203,12 @@
           };
 
           localStorage.setItem("shopCementData", JSON.stringify(updatedCementData));
-          window.location.href = "client-summary.html";
+          window.location.href = "../clients/client-summary.html";
         });
 
       document.getElementById("delete-cement-btn").addEventListener("click", () => {
         localStorage.removeItem("shopCementData");
-        window.location.href = "client-summary.html";
+        window.location.href = "../clients/client-summary.html";
       });
     </script>
   </body>
