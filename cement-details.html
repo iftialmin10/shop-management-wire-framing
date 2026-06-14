@@ -16,139 +16,92 @@
         background: linear-gradient(135deg, #f8fafc, #ede9fe);
       }
 
-      .details-card {
-        max-width: 720px;
-        width: 100%;
+      .cement-card {
         border: 0;
         border-radius: 1.25rem;
-        box-shadow: 0 1rem 2.5rem rgba(15, 23, 42, 0.12);
+        box-shadow: 0 1rem 2.5rem rgba(15, 23, 42, 0.1);
+      }
+
+      .selectable-row {
+        cursor: pointer;
       }
     </style>
   </head>
   <body>
     <main class="container py-5">
-      <div class="row min-vh-100 align-items-center justify-content-center">
-        <div class="col-12 d-flex justify-content-center">
-          <div class="card details-card p-4 p-md-5">
-            <div class="card-body">
-              <div
-                class="d-flex justify-content-between align-items-center mb-4"
-              >
-                <h1 class="h2 fw-bold mb-0">Cement Details</h1>
-                <button
-                  type="button"
-                  class="btn btn-outline-secondary"
-                  onclick="window.history.back()"
-                >
-                  Back
-                </button>
-              </div>
+      <div class="card cement-card p-4 p-md-5">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1 class="h2 fw-bold mb-0">Cement Details</h1>
+            <a href="product-details.html" class="btn btn-outline-secondary">
+              Back
+            </a>
+          </div>
 
-              <form id="cement-form">
-                <div class="row g-3">
-                  <div class="col-12 col-md-6">
-                    <label for="cement-date" class="form-label">Date</label>
-                    <input
-                      type="date"
-                      class="form-control"
-                      id="cement-date"
-                    />
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <label for="cement-brand" class="form-label"
-                      >cement Brand</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="cement-brand"
-                      placeholder="Enter cement brand"
-                    />
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <label for="price-packet" class="form-label"
-                      >price/packet</label
-                    >
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="price-packet"
-                      placeholder="Enter price per packet"
-                    />
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <label for="cement-category" class="form-label">
-                      cement category
-                    </label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="cement-category"
-                      placeholder="Enter cement category"
-                    />
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <label for="total-cement-bag" class="form-label">
-                      total cement bag
-                    </label>
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="total-cement-bag"
-                      placeholder="Enter total cement bags"
-                    />
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <label for="cement-total-price" class="form-label">
-                      total price
-                    </label>
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="cement-total-price"
-                      placeholder="Enter total price"
-                    />
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <label for="other-expense-cement" class="form-label">
-                      other expense
-                    </label>
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="other-expense-cement"
-                      placeholder="Enter other expense"
-                    />
-                  </div>
-                  <div class="col-12">
-                    <label for="cement-cost" class="form-label">cost</label>
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="cement-cost"
-                      placeholder="Enter cost"
-                    />
-                  </div>
-                </div>
-              </form>
-
-              <div class="d-flex justify-content-between gap-2 mt-4">
-                <button
-                  type="button"
-                  class="btn btn-outline-secondary"
-                  onclick="window.history.back()"
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped align-middle mb-0">
+              <thead class="table-light">
+                <tr>
+                  <th>Brand-Name</th>
+                  <th>Categories</th>
+                  <th>Current amount</th>
+                  <th>Add</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  class="selectable-row"
+                  onclick="window.location.href = 'cement-stock.html'"
                 >
-                  Close
-                </button>
-                <button
-                  type="submit"
-                  form="cement-form"
-                  class="btn btn-success"
+                  <td>SevenRings</td>
+                  <td>BM</td>
+                  <td>300</td>
+                  <td>
+                    <a
+                      href="add-cement.html"
+                      class="btn btn-sm btn-success"
+                      onclick="event.stopPropagation()"
+                    >
+                      Add
+                    </a>
+                  </td>
+                </tr>
+                <tr
+                  class="selectable-row"
+                  onclick="window.location.href = 'cement-stock.html'"
                 >
-                  Save Cement
-                </button>
-              </div>
-            </div>
+                  <td>SevenRings</td>
+                  <td>AM</td>
+                  <td>500</td>
+                  <td>
+                    <a
+                      href="add-cement.html"
+                      class="btn btn-sm btn-success"
+                      onclick="event.stopPropagation()"
+                    >
+                      Add
+                    </a>
+                  </td>
+                </tr>
+                <tr
+                  class="selectable-row"
+                  onclick="window.location.href = 'cement-stock.html'"
+                >
+                  <td>SevenRings</td>
+                  <td>OPC</td>
+                  <td>600</td>
+                  <td>
+                    <a
+                      href="add-cement.html"
+                      class="btn btn-sm btn-success"
+                      onclick="event.stopPropagation()"
+                    >
+                      Add
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -159,44 +112,5 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script>
-      const redirectToCashMemo = (data) => {
-        localStorage.setItem("shopProductData", JSON.stringify(data));
-        window.location.href = "client-summary.html";
-      };
-
-      document
-        .getElementById("cement-form")
-        .addEventListener("submit", (event) => {
-          event.preventDefault();
-
-          redirectToCashMemo({
-            productName: "Cement",
-            unitLabel: "price/packet",
-            unitCost: document.getElementById("price-packet").value,
-            totalCost: document.getElementById("cement-total-price").value,
-            otherExpense: document.getElementById("other-expense-cement").value,
-            cost: document.getElementById("cement-cost").value,
-            details: [
-              {
-                label: "Date",
-                value: document.getElementById("cement-date").value,
-              },
-              {
-                label: "cement Brand",
-                value: document.getElementById("cement-brand").value,
-              },
-              {
-                label: "cement category",
-                value: document.getElementById("cement-category").value,
-              },
-              {
-                label: "total cement bag",
-                value: document.getElementById("total-cement-bag").value,
-              },
-            ],
-          });
-        });
-    </script>
   </body>
 </html>

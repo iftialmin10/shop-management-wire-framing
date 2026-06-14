@@ -45,14 +45,23 @@
           <div class="mb-4">
             <div class="d-flex align-items-center justify-content-between mb-4">
               <h1 class="h2 fw-bold mb-0">Client Summary</h1>
-              <button
-                type="button"
-                class="btn btn-outline-secondary"
-                id="edit-client-btn"
-                onclick="window.location.href = 'edit-client.html'"
-              >
-                Edit
-              </button>
+              <div class="d-flex gap-2">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  id="edit-client-btn"
+                  onclick="window.location.href = 'edit-client.html'"
+                >
+                  Edit
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  onclick="window.location.href = 'client-history.html'"
+                >
+                  Back
+                </button>
+              </div>
             </div>
             <div class="row g-3">
               <div class="col-12 col-md-3">
@@ -116,19 +125,14 @@
             >
               New Deposit
             </button>
-            <input
-              type="date"
-              class="form-control"
-              id="memo-date"
-              style="max-width: 180px"
-              aria-label="Cash memo date"
-            />
+            <span class="form-control w-auto" id="memo-date">15/12/25</span>
             <button
               type="button"
               class="btn btn-outline-primary"
               id="cash-memo-btn"
+              onclick="window.location.href = 'cash-memo.html'"
             >
-              Cash memo
+              Generate cash-memo
             </button>
           </div>
 
@@ -238,20 +242,13 @@
             </table>
           </div>
 
-          <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex justify-content-end align-items-center">
             <button
               type="button"
               class="btn btn-outline-primary"
               onclick="window.print()"
             >
               Print
-            </button>
-            <button
-              type="button"
-              class="btn btn-outline-secondary"
-              onclick="window.location.href = 'client-history.html'"
-            >
-              Back
             </button>
           </div>
         </div>

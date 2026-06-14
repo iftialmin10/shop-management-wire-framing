@@ -45,7 +45,7 @@
                 <p class="text-primary fw-semibold mb-1">Shop Management</p>
                 <h1 class="h2 fw-bold memo-title mb-0">CASH MEMO</h1>
               </div>
-              <a href="product-selection.html" class="btn btn-outline-secondary">
+              <a href="client-summary.html" class="btn btn-outline-secondary">
                 Back
               </a>
             </div>
@@ -53,24 +53,34 @@
             <div class="row g-3 mb-4">
               <div class="col-12 col-md-6">
                 <div class="info-box p-3">
-                  <strong>Name:</strong> <span id="memo-name">-</span>
+                  <strong>Name:</strong> <span id="memo-name">Taleb</span>
                 </div>
               </div>
               <div class="col-12 col-md-6">
                 <div class="info-box p-3">
-                  <strong>Phone:</strong> <span id="memo-phone">-</span>
+                  <strong>Phone:</strong> <span id="memo-phone">0199999</span>
                 </div>
               </div>
               <div class="col-12 col-md-8">
                 <div class="info-box p-3">
-                  <strong>Address:</strong> <span id="memo-address">-</span>
+                  <strong>Address:</strong> <span id="memo-address">Bhola</span>
                 </div>
               </div>
               <div class="col-12 col-md-4">
                 <div class="info-box p-3">
-                  <strong>Date:</strong> <span id="memo-date">-</span>
+                  <strong>Date:</strong> <span id="memo-date">15/12/25</span>
                 </div>
               </div>
+            </div>
+
+            <div class="mb-3">
+              <button
+                type="button"
+                class="btn btn-outline-primary"
+                onclick="window.print()"
+              >
+                Print
+              </button>
             </div>
 
             <div class="table-responsive mb-4">
@@ -78,12 +88,55 @@
                 <thead class="table-light">
                   <tr>
                     <th>Description</th>
-                    <th>Cost</th>
-                    <th>Total</th>
+                    <th>Amount</th>
+                    <th>Cost/Unit</th>
+                    <th>Total Cost</th>
                   </tr>
                 </thead>
-                <tbody id="memo-items"></tbody>
+                <tbody id="memo-items">
+                  <tr>
+                    <td>past due</td>
+                    <td></td>
+                    <td></td>
+                    <td>18500</td>
+                  </tr>
+                  <tr>
+                    <td>Cement</td>
+                    <td>50 bag</td>
+                    <td>34</td>
+                    <td>1700</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="fw-bold">Total Due</td>
+                    <td class="fw-bold">20200</td>
+                  </tr>
+                  <tr>
+                    <td>deposit</td>
+                    <td></td>
+                    <td></td>
+                    <td>6000</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="fw-bold">Current Due</td>
+                    <td class="fw-bold">14200</td>
+                  </tr>
+                </tfoot>
               </table>
+            </div>
+
+            <div class="d-flex justify-content-between gap-4 mt-5">
+              <div class="text-center flex-fill">
+                <div class="border-top border-dark pt-2">Buyer Signature</div>
+              </div>
+              <div class="text-center flex-fill">
+                <div class="border-top border-dark pt-2">Seller Signature</div>
+              </div>
             </div>
 
           </div>
@@ -91,58 +144,5 @@
       </div>
     </main>
 
-    <script>
-      const clientData = JSON.parse(localStorage.getItem("shopClientData") || "{}");
-      const productData = JSON.parse(localStorage.getItem("shopProductData") || "{}");
-
-      const setText = (id, value) => {
-        document.getElementById(id).textContent = value || "-";
-      };
-
-      setText("memo-name", clientData.name);
-      setText("memo-phone", clientData.phone);
-      setText("memo-address", clientData.address);
-      setText("memo-date", new Date().toLocaleDateString());
-
-      const memoItems = document.getElementById("memo-items");
-      const rows = [];
-
-      if (productData.productName) {
-        rows.push({
-          description: `${productData.productName} (${productData.unitLabel})`,
-          cost: productData.unitCost || "-",
-          total: productData.totalCost || "-",
-        });
-      }
-
-      if (productData.otherExpense) {
-        rows.push({
-          description: "Other expense",
-          cost: productData.otherExpense,
-          total: productData.otherExpense,
-        });
-      }
-
-      if (productData.cost) {
-        rows.push({
-          description: "cost",
-          cost: productData.cost,
-          total: productData.cost,
-        });
-      }
-
-      memoItems.innerHTML = rows
-        .map(
-          (row) => `
-            <tr>
-              <td>${row.description}</td>
-              <td>${row.cost}</td>
-              <td>${row.total}</td>
-            </tr>
-          `,
-        )
-        .join("");
-
-    </script>
   </body>
 </html>
