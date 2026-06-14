@@ -22,6 +22,18 @@
         border: 0;
         border-radius: 1.25rem;
         box-shadow: 0 1rem 2.5rem rgba(15, 23, 42, 0.12);
+        position: relative;
+      }
+
+      .settings-btn {
+        position: absolute;
+        right: 1.5rem;
+        bottom: 1.5rem;
+        min-height: 2.75rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.35rem;
       }
     </style>
   </head>
@@ -30,13 +42,7 @@
       <div class="row min-vh-100 align-items-center justify-content-center">
         <div class="col-12 d-flex justify-content-center">
           <div class="card dashboard-card p-4 p-md-5">
-            <div class="card-body text-center">
-              <div class="d-flex justify-content-start mb-4">
-                <a href="index.html" class="btn btn-outline-danger">
-                  Logout
-                </a>
-              </div>
-
+            <div class="card-body text-center pb-5">
               <h1 class="h2 fw-bold mb-2">Shop Management</h1>
               <p class="text-muted mb-5">
                 Choose an option to continue after signing in.
@@ -53,6 +59,15 @@
                   Product Details
                 </a>
               </div>
+              <a
+                href="advanced-settings.html"
+                class="btn btn-outline-dark settings-btn"
+                aria-label="Advanced settings"
+                title="Advanced settings"
+              >
+                <span aria-hidden="true">&#9881;</span>
+                <span>settings</span>
+              </a>
             </div>
           </div>
         </div>
