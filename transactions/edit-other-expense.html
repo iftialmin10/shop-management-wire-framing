@@ -65,6 +65,7 @@
                       class="form-control form-control-lg"
                       id="expense-description"
                       placeholder="Enter description"
+                      value="Other Expense"
                     />
                   </div>
 
@@ -75,6 +76,7 @@
                       class="form-control form-control-lg"
                       id="expense-taka"
                       placeholder="Enter taka"
+                      value="5000"
                     />
                   </div>
                 </div>
@@ -106,8 +108,8 @@
     <script>
       const defaultExpenseData = {
         date: "",
-        description: "",
-        taka: "",
+        description: "Other Expense",
+        taka: "5000",
       };
 
       const expenseData = JSON.parse(

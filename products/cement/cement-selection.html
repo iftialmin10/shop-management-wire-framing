@@ -23,6 +23,12 @@
         border-radius: 1.25rem;
         box-shadow: 0 1rem 2.5rem rgba(15, 23, 42, 0.1);
       }
+
+      .input-box {
+        border: 1px solid #bbf7d0;
+        border-radius: 1rem;
+        background: #f0fdf4;
+      }
     </style>
   </head>
   <body>
@@ -49,165 +55,174 @@
               </div>
 
               <form id="cement-selection-form">
-                <div class="row g-3">
+                <div class="input-box p-3 p-md-4 mb-4">
+                  <div class="row g-3">
+                    <div class="col-12 col-md-6">
+                      <label for="cement-brand" class="form-label">
+                        CementBrand
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="cement-brand"
+                        value="SevenRings"
+                        readonly
+                      />
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label for="price-packet" class="form-label">
+                        price/bag
+                      </label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="price-packet"
+                        value="300"
+                      />
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label for="cement-category" class="form-label">
+                        Cement category
+                      </label>
+                      <select class="form-select" id="cement-category">
+                        <option selected>BM</option>
+                        <option>AM</option>
+                        <option>OPC</option>
+                      </select>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label for="total-cement-bag" class="form-label">
+                        Total cement bag
+                      </label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="total-cement-bag"
+                        value="20"
+                      />
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label for="total-price" class="form-label">
+                        Total price
+                      </label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="total-price"
+                        value="600"
+                        readonly
+                      />
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label for="other-expense" class="form-label">
+                        other expense
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="other-expense"
+                        value="Carrying"
+                      />
+                    </div>
+                    <div class="col-12">
+                      <label for="cost" class="form-label">cost</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="cost"
+                        value="200"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="input-box p-3 p-md-4">
+                  <div class="row g-3">
                   <div class="col-12 col-md-6">
-                    <label for="cement-brand" class="form-label">
+                    <label for="cement-brand-2" class="form-label">
                       CementBrand
                     </label>
                     <input
                       type="text"
                       class="form-control"
-                      id="cement-brand"
+                      id="cement-brand-2"
                       value="SevenRings"
+                      readonly
                     />
                   </div>
                   <div class="col-12 col-md-6">
-                    <label for="price-packet" class="form-label">
-                      price/packet
+                    <label for="price-packet-2" class="form-label">
+                      price/bag
                     </label>
                     <input
                       type="number"
                       class="form-control"
-                      id="price-packet"
+                      id="price-packet-2"
                       value="300"
                     />
                   </div>
                   <div class="col-12 col-md-6">
-                    <label for="cement-category" class="form-label">
+                    <label for="cement-category-2" class="form-label">
                       Cement category
                     </label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="cement-category"
-                      value="BM"
-                    />
+                    <select class="form-select" id="cement-category-2">
+                      <option selected>BM</option>
+                      <option>AM</option>
+                      <option>OPC</option>
+                    </select>
                   </div>
                   <div class="col-12 col-md-6">
-                    <label for="total-cement-bag" class="form-label">
+                    <label for="total-cement-bag-2" class="form-label">
                       Total cement bag
                     </label>
                     <input
                       type="number"
                       class="form-control"
-                      id="total-cement-bag"
+                      id="total-cement-bag-2"
                       value="20"
                     />
                   </div>
                   <div class="col-12 col-md-6">
-                    <label for="total-price" class="form-label">
+                    <label for="total-price-2" class="form-label">
                       Total price
                     </label>
                     <input
                       type="number"
                       class="form-control"
-                      id="total-price"
+                      id="total-price-2"
                       value="600"
+                      readonly
                     />
                   </div>
                   <div class="col-12 col-md-6">
-                    <label for="other-expense" class="form-label">
+                    <label for="other-expense-2" class="form-label">
                       other expense
                     </label>
                     <input
                       type="text"
                       class="form-control"
-                      id="other-expense"
+                      id="other-expense-2"
                       value="Carrying"
                     />
                   </div>
                   <div class="col-12">
-                    <label for="cost" class="form-label">cost</label>
+                    <label for="cost-2" class="form-label">cost</label>
                     <input
                       type="number"
                       class="form-control"
-                      id="cost"
+                      id="cost-2"
                       value="200"
                     />
                   </div>
-                </div>
-
-                <div class="row g-3">
-                  <div class="col-12 col-md-6">
-                    <label for="cement-brand" class="form-label">
-                      CementBrand
-                    </label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="cement-brand"
-                      value="SevenRings"
-                    />
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <label for="price-packet" class="form-label">
-                      price/packet
-                    </label>
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="price-packet"
-                      value="300"
-                    />
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <label for="cement-category" class="form-label">
-                      Cement category
-                    </label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="cement-category"
-                      value="BM"
-                    />
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <label for="total-cement-bag" class="form-label">
-                      Total cement bag
-                    </label>
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="total-cement-bag"
-                      value="20"
-                    />
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <label for="total-price" class="form-label">
-                      Total price
-                    </label>
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="total-price"
-                      value="600"
-                    />
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <label for="other-expense" class="form-label">
-                      other expense
-                    </label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="other-expense"
-                      value="Carrying"
-                    />
-                  </div>
-                  <div class="col-12">
-                    <label for="cost" class="form-label">cost</label>
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="cost"
-                      value="200"
-                    />
                   </div>
                 </div>
 
-                <div class="mt-4">
+                <div class="d-flex gap-2 mt-4">
                   <button type="button" class="btn btn-outline-success">
                     Add More
+                  </button>
+                  <button type="button" class="btn btn-outline-danger">
+                    Delete
                   </button>
                 </div>
 
