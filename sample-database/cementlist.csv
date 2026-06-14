@@ -1,4 +1,4 @@
-cementName,cementCategories,cementAmount
-sevenRings,BM,500
-sevenRings,OPC,100
-sevenRings,AM,100
+ce-id,ce-name,ce-categories
+1,sevenRings,BM
+2,sevenRings,OPC
+3,sevenRings,AM

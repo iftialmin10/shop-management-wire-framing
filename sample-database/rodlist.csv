@@ -1,5 +1,5 @@
-rodSize,rodBrand,remainingWeight
-12,BSRM,200
-16,BSRM,1000
-20,KSRM,900
-8,AKS,500
+r-id,r-ize,r-brand
+1,12,BSRM
+2,16,BSRM
+3,20,KSRM
+4,8,AKS
