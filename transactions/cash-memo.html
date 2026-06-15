@@ -45,9 +45,18 @@
                 <p class="text-primary fw-semibold mb-1">Shop Management</p>
                 <h1 class="h2 fw-bold memo-title mb-0">CASH MEMO</h1>
               </div>
-              <a href="../clients/client-summary.html" class="btn btn-outline-secondary">
-                Back
-              </a>
+              <div class="d-flex gap-2">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary"
+                  onclick="window.print()"
+                >
+                  Print
+                </button>
+                <a href="../clients/client-summary.html" class="btn btn-outline-secondary">
+                  Back
+                </a>
+              </div>
             </div>
 
             <div class="row g-3 mb-4">
@@ -71,16 +80,6 @@
                   <strong>Date:</strong> <span id="memo-date">15/12/25</span>
                 </div>
               </div>
-            </div>
-
-            <div class="mb-3">
-              <button
-                type="button"
-                class="btn btn-outline-primary"
-                onclick="window.print()"
-              >
-                Print
-              </button>
             </div>
 
             <div class="table-responsive mb-4">

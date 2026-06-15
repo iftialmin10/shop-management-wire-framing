@@ -67,6 +67,13 @@
               <div class="d-flex gap-2">
                 <button
                   type="button"
+                  class="btn btn-outline-primary"
+                  onclick="window.print()"
+                >
+                  Print
+                </button>
+                <button
+                  type="button"
                   class="btn btn-outline-secondary"
                   id="edit-client-btn"
                   onclick="window.location.href = 'edit-client.html'"
@@ -114,11 +121,11 @@
             <div class="row g-3 text-center">
               <div class="col-12 col-md-4">
                 <p class="text-muted mb-1">Total deposit</p>
-                <p class="h4 fw-bold mb-0">8500tk</p>
+                <p class="h4 fw-bold text-success mb-0">8500tk</p>
               </div>
               <div class="col-12 col-md-4">
                 <p class="text-muted mb-1">Total debt</p>
-                <p class="h4 fw-bold mb-0">11700tk</p>
+                <p class="h4 fw-bold text-danger mb-0">11700tk</p>
               </div>
               <div class="col-12 col-md-4">
                 <p class="text-muted mb-1">Total Use</p>
@@ -282,15 +289,6 @@
             </table>
           </div>
 
-          <div class="d-flex justify-content-end align-items-center">
-            <button
-              type="button"
-              class="btn btn-outline-primary"
-              onclick="window.print()"
-            >
-              Print
-            </button>
-          </div>
         </div>
       </div>
     </main>
