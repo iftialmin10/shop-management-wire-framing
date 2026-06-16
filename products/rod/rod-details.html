@@ -34,7 +34,13 @@
           <div class="d-flex justify-content-between align-items-center mb-4">
             <h1 class="h2 fw-bold mb-0">Rod Store Details</h1>
             <div class="d-flex gap-2">
-              <button type="button" class="btn btn-primary">+</button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="window.location.href = 'load-rod.html'"
+              >
+                Load Rod
+              </button>
               <button
                 type="button"
                 class="btn btn-outline-primary"
@@ -55,7 +61,6 @@
                   <th>R-size</th>
                   <th>Brand</th>
                   <th>Remaining Weight</th>
-                  <th>Add rod</th>
                 </tr>
               </thead>
               <tbody>
@@ -63,153 +68,33 @@
                   class="selectable-row"
                   onclick="window.location.href = 'rod-stock.html'"
                 >
-                  <td>
-                    <select
-                      class="form-select form-select-sm"
-                      onclick="event.stopPropagation()"
-                    >
-                      <option>6mm</option>
-                      <option>8mm</option>
-                      <option>10mm</option>
-                      <option selected>12mm</option>
-                      <option>16mm</option>
-                      <option>20mm</option>
-                    </select>
-                  </td>
-                  <td>
-                    <select
-                      class="form-select form-select-sm"
-                      onclick="event.stopPropagation()"
-                    >
-                      <option selected>BSRM</option>
-                      <option>KSRM</option>
-                      <option>AKS</option>
-                    </select>
-                  </td>
+                  <td>12mm</td>
+                  <td>BSRM</td>
                   <td>900kg</td>
-                  <td>
-                    <a
-                      href="add-rod.html"
-                      class="btn btn-sm btn-primary"
-                      onclick="event.stopPropagation()"
-                    >
-                      Add
-                    </a>
-                  </td>
                 </tr>
                 <tr
                   class="selectable-row"
                   onclick="window.location.href = 'rod-stock.html'"
                 >
-                  <td>
-                    <select
-                      class="form-select form-select-sm"
-                      onclick="event.stopPropagation()"
-                    >
-                      <option>6mm</option>
-                      <option>8mm</option>
-                      <option selected>10mm</option>
-                      <option>12mm</option>
-                      <option>16mm</option>
-                      <option>20mm</option>
-                    </select>
-                  </td>
-                  <td>
-                    <select
-                      class="form-select form-select-sm"
-                      onclick="event.stopPropagation()"
-                    >
-                      <option>BSRM</option>
-                      <option selected>KSRM</option>
-                      <option>AKS</option>
-                    </select>
-                  </td>
+                  <td>10mm</td>
+                  <td>KSRM</td>
                   <td>1200kg</td>
-                  <td>
-                    <a
-                      href="add-rod.html"
-                      class="btn btn-sm btn-primary"
-                      onclick="event.stopPropagation()"
-                    >
-                      Add
-                    </a>
-                  </td>
                 </tr>
                 <tr
                   class="selectable-row"
                   onclick="window.location.href = 'rod-stock.html'"
                 >
-                  <td>
-                    <select
-                      class="form-select form-select-sm"
-                      onclick="event.stopPropagation()"
-                    >
-                      <option>6mm</option>
-                      <option>8mm</option>
-                      <option>10mm</option>
-                      <option>12mm</option>
-                      <option selected>16mm</option>
-                      <option>20mm</option>
-                    </select>
-                  </td>
-                  <td>
-                    <select
-                      class="form-select form-select-sm"
-                      onclick="event.stopPropagation()"
-                    >
-                      <option>BSRM</option>
-                      <option>KSRM</option>
-                      <option selected>AKS</option>
-                    </select>
-                  </td>
+                  <td>16mm</td>
+                  <td>AKS</td>
                   <td>750kg</td>
-                  <td>
-                    <a
-                      href="add-rod.html"
-                      class="btn btn-sm btn-primary"
-                      onclick="event.stopPropagation()"
-                    >
-                      Add
-                    </a>
-                  </td>
                 </tr>
                 <tr
                   class="selectable-row"
                   onclick="window.location.href = 'rod-stock.html'"
                 >
-                  <td>
-                    <select
-                      class="form-select form-select-sm"
-                      onclick="event.stopPropagation()"
-                    >
-                      <option>6mm</option>
-                      <option>8mm</option>
-                      <option>10mm</option>
-                      <option>12mm</option>
-                      <option>16mm</option>
-                      <option selected>20mm</option>
-                    </select>
-                  </td>
-                  <td>
-                    <select
-                      class="form-select form-select-sm"
-                      onclick="event.stopPropagation()"
-                    >
-                      <option selected>BSRM</option>
-                      <option>KSRM</option>
-                      <option>AKS</option>
-                    </select>
-                  </td>
+                  <td>20mm</td>
+                  <td>BSRM</td>
                   <td>600kg</td>
-                  <td>
-                    <a
-                      href="add-rod.html"
-                      class="btn btn-sm btn-primary"
-                      onclick="event.stopPropagation()"
-                    >
-                      Add
-                    </a>
-                  </td>
                 </tr>
               </tbody>
             </table>
