@@ -37,6 +37,11 @@
         font-weight: 600;
       }
 
+      .status.paid-client {
+        color: #dc3545;
+        font-weight: 600;
+      }
+
       .status.spend-rod {
         color: #0d6efd;
         font-weight: 600;
@@ -54,6 +59,16 @@
 
       .status-prefix {
         color: #dc3545;
+      }
+
+      .delivery-status.completed {
+        color: #198754;
+        font-weight: 600;
+      }
+
+      .delivery-status.pending {
+        color: #ffc107;
+        font-weight: 600;
       }
     </style>
   </head>
@@ -155,15 +170,32 @@
             >
               New Deposit
             </button>
-            <span class="form-control w-auto" id="memo-date">15/12/25</span>
             <button
               type="button"
-              class="btn btn-outline-primary"
-              id="cash-memo-btn"
-              onclick="window.location.href = '../transactions/cash-memo.html'"
+              class="btn btn-warning"
+              id="misc-payment-btn"
+              onclick="
+                window.location.href = '../products/misc-payment-to-client.html'
+              "
             >
-              Generate cash-memo
+              Misc Payment To Client
             </button>
+            <div class="input-group w-auto">
+              <input
+                type="text"
+                class="form-control"
+                id="memo-date"
+                value="15/12/25"
+              />
+              <button
+                type="button"
+                class="btn btn-outline-primary"
+                id="cash-memo-btn"
+                onclick="window.location.href = '../transactions/cash-memo.html'"
+              >
+                Generate cash-memo
+              </button>
+            </div>
           </div>
 
           <div class="table-responsive mb-4">
@@ -172,6 +204,7 @@
                 <tr>
                   <th>Date</th>
                   <th>Description</th>
+                  <th>Delivery status</th>
                   <th>Taka</th>
                   <th style="color: #000">Transaction type</th>
                   <th style="color: #000">Edit</th>
@@ -181,6 +214,9 @@
                 <tr>
                   <td>15/05/25</td>
                   <td>Rod 16 KSRM 700kg</td>
+                  <td>
+                    <span class="delivery-status completed">Completed</span>
+                  </td>
                   <td>10500</td>
                   <td>Spend, Rod</td>
                   <td>
@@ -198,6 +234,9 @@
                 <tr>
                   <td>15/05/25</td>
                   <td>Cement 100bag</td>
+                  <td>
+                    <span class="delivery-status completed">Completed</span>
+                  </td>
                   <td>3000</td>
                   <td>Spend, Cement</td>
                   <td>
@@ -215,7 +254,8 @@
                 </tr>
                 <tr>
                   <td>15/05/25</td>
-                  <td>other expense</td>
+                  <td>past expense</td>
+                  <td></td>
                   <td>5000</td>
                   <td>Spend, Other</td>
                   <td>
@@ -234,6 +274,7 @@
                 <tr>
                   <td>15/12/25</td>
                   <td>By cash</td>
+                  <td></td>
                   <td>6000</td>
                   <td>Deposit</td>
                   <td>
@@ -252,6 +293,7 @@
                 <tr>
                   <td>19/12/25</td>
                   <td>By cash</td>
+                  <td></td>
                   <td>2500</td>
                   <td>Deposit</td>
                   <td>
@@ -270,6 +312,9 @@
                 <tr>
                   <td>15/12/25</td>
                   <td>Cement 50bag</td>
+                  <td>
+                    <span class="delivery-status pending">Pending</span>
+                  </td>
                   <td>1700</td>
                   <td>Spend, Cement</td>
                   <td>
@@ -285,10 +330,28 @@
                     </button>
                   </td>
                 </tr>
+                <tr>
+                  <td>10/03/25</td>
+                  <td>Paid to client</td>
+                  <td></td>
+                  <td>3000</td>
+                  <td>Paid to Client</td>
+                  <td>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                      onclick="
+                        window.location.href =
+                          '../transactions/edit-misc-payment-to-client.html'
+                      "
+                    >
+                      Edit
+                    </button>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
-
         </div>
       </div>
     </main>
@@ -348,9 +411,9 @@
           // Now convert status cells to labels with color
           Array.from(tbody.querySelectorAll("tr")).forEach((row) => {
             const cells = row.querySelectorAll("td");
-            if (cells.length < 4) return;
+            if (cells.length < 5) return;
 
-            const cell = cells[3];
+            const cell = cells[4];
             const text = cell.textContent.trim();
             const description = cells[1].textContent.trim().toLowerCase();
             const num = parseFloat(text.replace(/[,\s]+/g, ""));
@@ -361,6 +424,7 @@
             } else {
               const t = text.toLowerCase();
               if (t.includes("deposit")) status = "deposit";
+              else if (t.includes("paid to client")) status = "Paid to Client";
               else if (t.includes("spend")) status = "Spend";
             }
 
@@ -375,7 +439,9 @@
               let statusClass = "spend";
               const statusText = status.toLowerCase();
               if (statusText.includes("deposit")) statusClass = "deposit";
-              else if (statusText.includes("rod")) statusClass = "spend-rod";
+              else if (statusText.includes("paid to client")) {
+                statusClass = "paid-client";
+              } else if (statusText.includes("rod")) statusClass = "spend-rod";
               else if (statusText.includes("cement")) {
                 statusClass = "spend-cement";
               } else if (statusText.includes("other")) {
