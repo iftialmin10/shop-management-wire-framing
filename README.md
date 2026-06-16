@@ -6,7 +6,7 @@ The website is a shop management system for tracking clients, rod purchases, cem
 
 The system should support daily operational use by a shop owner or staff member who needs to record client activity, manage rod and cement stock, review customer balances, and generate cash memo summaries.
 
-Open question: Should this website be designed for a single shop only, or should it support multiple branches/shops in the future?
+Open question 1: Should this website be designed for a single shop only, or should it support multiple branches/shops in the future?
 
 ## 2. Entry And Login Experience
 
@@ -14,7 +14,7 @@ The first screen is the login page. It contains the shop brand mark, the title "
 
 The login screen should feel simple and direct. It should not include extra navigation or complex setup actions. The purpose is only to identify the user and open the management dashboard.
 
-Open question: Do you want the login to support different roles, such as owner, manager, and staff?
+Open question 2: Do you want the login to support different roles, such as owner, manager, and staff?
 
 ## 3. Dashboard
 
@@ -27,7 +27,7 @@ The dashboard is the main hub after login. It should provide access to:
 
 The settings control should appear as a gear/settings control near the bottom-right area of the dashboard. Logout should be available from the settings area rather than the main dashboard.
 
-Open question: Should the dashboard show summary numbers, such as total due, total deposit, or current stock alerts?
+Open question 3: Should the dashboard show summary numbers, such as total due, total deposit, or current stock alerts?
 
 ## 4. Client Management
 
@@ -40,7 +40,7 @@ The client workflow should allow the user to create a new client, view client hi
 
 The Client History page should show clients in a table. The table should include ID, phone, name, address, and reference. Selecting a client row should open that client's summary.
 
-Open question: Should client search support only name and phone, or should it also search by address and reference?
+Open question 4: Should client search support only name and phone, or should it also search by address and reference?
 
 ## 5. Client Summary
 
@@ -75,7 +75,7 @@ The transaction table should include date, description, taka, transaction type, 
 
 Only "Spend," should be red. Rod should be blue, Cement should be green, and Other should be yellow.
 
-Open question: Should the financial totals be calculated from the transaction rows automatically, or entered manually for now?
+Open question 5: Should the financial totals be calculated from the transaction rows automatically, or entered manually for now?
 
 ## 6. Purchases
 
@@ -87,7 +87,7 @@ The New Purchase flow should start from Product Selection. The user should choos
 
 Rod and Cement purchases should use separate selection pages. Other Expense should use a simpler expense entry page.
 
-Open question: Should a single purchase be allowed to include both rod and cement together, or should each purchase stay separate by product type?
+Open question 6: Should a single purchase be allowed to include both rod and cement together, or should each purchase stay separate by product type?
 
 ## 7. Rod Purchase Selection
 
@@ -118,7 +118,7 @@ R-size should be a dropdown with:
 
 Total cost should be static and not editable. The page should include Add More and Save actions at the bottom.
 
-Open question: Should total cost be automatically calculated from Price/Kg and Total weight?
+Open question 7: Should total cost be automatically calculated from Price/Kg and Total weight?
 
 ## 8. Cement Purchase Selection
 
@@ -140,7 +140,7 @@ Cement category should be a dropdown with:
 
 CementBrand and Total price should be fixed and not editable. The page should include Add More, Delete, and Save actions.
 
-Open question: Should the two cement data groups represent two different cement entries in one purchase?
+Open question 8: Should the two cement data groups represent two different cement entries in one purchase?
 
 ## 9. Other Expense
 
@@ -158,7 +158,7 @@ Default sample values should include:
 
 The page should include Save and Back actions. It should not include a Delete button.
 
-Open question: Should Other Expense support categories such as carrying, labor, transport, or miscellaneous?
+Open question 9: Should Other Expense support categories such as carrying, labor, transport, or miscellaneous?
 
 ## 10. Transaction Editing
 
@@ -175,7 +175,7 @@ Edit Cement Expense should include cement brand, price/bag, cement category, tot
 
 Edit Other Expense should include date, description, and taka. Default sample values should include Date 12/12/25, Description Other Expense, and Taka 5000.
 
-Open question: Should edit pages allow deleting saved records, or should delete actions require a confirmation step?
+Open question 10: Should edit pages allow deleting saved records, or should delete actions require a confirmation step?
 
 ## 11. Cash Memo
 
@@ -195,7 +195,7 @@ The memo table should show:
 
 It should include rows for past due, product purchase, total due, deposit, and current due. The page should also include buyer and seller signature areas and a Print button before the table section.
 
-Open question: Should the cash memo be printable only, or should it also be downloadable as a PDF?
+Open question 11: Should the cash memo be printable only, or should it also be downloadable as a PDF?
 
 ## 12. Product Store Details
 
@@ -219,7 +219,7 @@ Cement Store Details should show cement inventory rows with:
 
 Categories should be a dropdown. Selecting a row should open Cement Stock. Add should open the Add Cement Store page.
 
-Open question: Should changing dropdown values in these tables update the stock item, or are they only visual placeholders for the wireframe?
+Open question 12: Should changing dropdown values in these tables update the stock item, or are they only visual placeholders for the wireframe?
 
 ## 13. Rod Stock
 
@@ -234,7 +234,7 @@ The table should include:
 
 Edit buttons should appear only for load rows, not sell rows. Pressing Edit on a load row should open the Edit Loaded Rod Date and Weight page.
 
-Open question: Should sell rows link back to the client transaction that created the sale?
+Open question 13: Should sell rows link back to the client transaction that created the sale?
 
 ## 14. Edit Loaded Rod
 
@@ -246,7 +246,7 @@ The Edit Loaded Rod Date and Weight page should include:
 
 It should include Back, Delete, and Save actions. Back, Delete, and Save should return to the Rod Stock page.
 
-Open question: Should deleting a loaded rod entry reduce the remaining stock immediately?
+Open question 14: Should deleting a loaded rod entry reduce the remaining stock immediately?
 
 ## 15. Cement Stock
 
@@ -261,7 +261,7 @@ The table should include:
 
 Edit buttons should appear only for load rows, not sell rows. Pressing Edit on a load row should open the Edit Stored Cement page.
 
-Open question: Should cement stock be tracked by bag count only, or should it also track purchase price by batch?
+Open question 15: Should cement stock be tracked by bag count only, or should it also track purchase price by batch?
 
 ## 16. Edit Stored Cement
 
@@ -273,19 +273,19 @@ The Edit Stored Cement page should include:
 
 It should include Back, Delete, and Save actions. Back, Delete, and Save should return to the Cement Stock page.
 
-Open question: Should deleting stored cement require checking whether any later sales depend on that stock?
+Open question 16: Should deleting stored cement require checking whether any later sales depend on that stock?
 
 ## 17. Add Rod Store
 
 The Add Rod page should allow the user to add rod stock information. It should include fields for rod brand, rod size, and rod weight. It should include Delete and Save actions. Delete and Save should return to Rod Store Details.
 
-Open question: Should Add Rod support adding multiple rod entries at once?
+Open question 17: Should Add Rod support adding multiple rod entries at once?
 
 ## 18. Add Cement Store
 
 The Add Cement Store page should allow the user to add cement stock information. Brand-Name and Categories should be fixed/static. Amount should be editable. The page should include Delete and Save actions. Delete and Save should return to Cement Store Details.
 
-Open question: Should Add Cement Store automatically use the selected brand/category from the Cement Store Details row?
+Open question 18: Should Add Cement Store automatically use the selected brand/category from the Cement Store Details row?
 
 ## 19. Advanced Settings
 
@@ -298,25 +298,25 @@ Advanced Settings should be accessible from the dashboard settings control. The 
 
 Each option should open its related page or perform its related action. Back should return to the dashboard.
 
-Open question: Should Logout ask for confirmation before returning to the login page?
+Open question 19: Should Logout ask for confirmation before returning to the login page?
 
 ## 20. Logged In Device
 
 The Logged In Device page should show a table of active or previously logged-in devices. Each row should include device details and a Remove button. The Remove button should only be shown as a button in the wireframe and should not remove any device yet.
 
-Open question: Should the final system allow removing other devices remotely?
+Open question 20: Should the final system allow removing other devices remotely?
 
 ## 21. Data Backup
 
 The Data Backup page should allow the user to prepare or download a backup of shop data. The page should communicate that backup data may include clients, transactions, stock, and settings.
 
-Open question: What backup format do you prefer: Excel/CSV, JSON, or database file?
+Open question 21: What backup format do you prefer: Excel/CSV, JSON, or database file?
 
 ## 22. Data Restore
 
 The Data Restore page should allow the user to choose a backup file and restore previous shop data. Because restore can replace current records, the page should clearly warn the user before restoration.
 
-Open question: Should restore replace all current data, or merge backup data with existing data?
+Open question 22: Should restore replace all current data, or merge backup data with existing data?
 
 ## 23. Navigation Rules
 
@@ -331,7 +331,7 @@ Navigation should stay clear and predictable:
 - Edit stock pages return to their stock pages
 - Settings pages return to Advanced Settings or Dashboard as appropriate
 
-Open question: Should every page include a Back button, even if the browser back button is available?
+Open question 23: Should every page include a Back button, even if the browser back button is available?
 
 ## 24. Visual And Interaction Guidelines
 
@@ -346,4 +346,4 @@ The interface should follow the existing wireframe style:
 
 The design should remain practical and operational rather than decorative.
 
-Open question: Do you want the final design to stay close to Bootstrap defaults, or should it receive a custom brand style later?
+Open question 24: Do you want the final design to stay close to Bootstrap defaults, or should it receive a custom brand style later?
