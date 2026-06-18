@@ -1,109 +1,239 @@
-# Rod/Cement Management Website Specification
+# Rod/Cement Shop Management Wireframe Specification
 
 ## 1. Project Overview
 
-The website is a shop management system for tracking clients, rod purchases, cement purchases, deposits, other expenses, inventory stock, cash memos, and administrative settings. The experience begins with a simple login screen branded as "Shop Management" and continues into a dashboard where the user can choose core workflows.
+This website is a single-shop management system for tracking clients, rod purchases, cement purchases, deposits, miscellaneous expenses, payments made back to clients, inventory stock, cash memos, backup and restore, and logged-in devices.
 
-The system should support daily operational use by a shop owner or staff member who needs to record client activity, manage rod and cement stock, review customer balances, and generate cash memo summaries.
+The system should support daily operational use by a shop owner or staff member who needs to record client activity, manage rod and cement stock, review balances, and print transaction summaries. The final system does not need multi-shop or multi-branch support.
 
-Open question 1: Should this website be designed for a single shop only, or should it support multiple branches/shops in the future?
+Open questions:
 
-Answer: This website should be designed for a single shop only.
+Open question 1: Should the shop name, address, phone, and logo be stored as editable shop profile information?
+
+Open Question 1 Answer: The shop name, address, phone, and logo should be stored as editable shop profile information
+
+Open question 2: Should the system support Bengali labels later, or should all screens remain English only?
+
+Open Question 2 Answer: The system should support Bengali labels later.
+
+Open question 3: Should sample data stay visible in the wireframe, or should the final design use empty states instead?
+
+Open Question 3 Answer: Sample data should stay visible in the wireframe.
 
 ## 2. Entry And Login Experience
 
-The first screen is the login page. It contains the shop brand mark, the title "Shop Management", a username field, a password field, and a Login button. After login, the user enters the dashboard.
+The first screen is the login page. It contains a circular "SM" brand badge, the title "Shop Management", supporting sign-in text, a username field, a password field, and a Login button.
 
-The login screen should feel simple and direct. It should not include extra navigation or complex setup actions. The purpose is only to identify the user and open the management dashboard.
+After login, the user enters the dashboard. The login does not need to support separate roles such as owner, manager, or staff.
 
-Open question 2: Do you want the login to support different roles, such as owner, manager, and staff?
+Open questions:
 
-Answer: No, the login does not need to support different roles.
+Open question 4: Should login require only username and password, or should phone number login also be supported?
+
+Open Question 4 Answer: login should require only username and password
+
+Open question 5: Should the final login screen include a remember-me option?
+
+Open Question 5 Answer: the final login screen should include a remember-me option.
+
+Open question 6: Should failed login attempts show a simple error message or a more detailed reason?
+
+Open Question 6 Answer: failed login attempts should show a simple error message.
 
 ## 3. Dashboard
 
-The dashboard is the main hub after login. It should provide access to:
+The dashboard is the main hub after login. It currently provides access to:
 
-- New Client
 - Client History
-- Product Details
-- Settings
+- Store House
+- Advanced Settings
 
-The settings control should appear as a gear/settings control near the bottom-right area of the dashboard. Logout should be available from the settings area rather than the main dashboard.
+The dashboard no longer shows a direct New Client button. New clients are created from the Client History page. Store House opens the product store details area. Advanced Settings is available through the settings control near the bottom-right of the dashboard card.
 
-Open question 3: Should the dashboard show summary numbers, such as total due, total deposit, or current stock alerts?
+The dashboard should eventually show summary numbers for total due, total deposit, and current stock alerts.
 
-Answer: Yes, the dashboard should show total due, total deposit, and current stock alerts.
+Open questions:
 
-## 4. Client Management
+Open question 7: Should dashboard summary numbers appear above the main buttons or in a separate summary row?
 
-The client workflow should allow the user to create a new client, view client history, edit client information, and open a client summary page. Client records should include:
+Open Question 7 Answer: dashboard summary numbers should appear above the main buttons
 
-- Client name
+Open question 8: Should stock alerts include both rod and cement, or only products below a minimum threshold?
+
+Open Question 8 Answer: stock alerts should include both rod and cement.
+
+Open question 9: Should the dashboard include a date filter for summary totals?
+
+Open Question 9 Answer: the dashboard should include a date filter for summary totals
+
+## 4. Client History
+
+The Client History page lists all clients in a table. It includes:
+
+- New Client button
+- Back button to the dashboard
+- Search field
+- Sort control
+- Client table
+
+The client table should include:
+
+- ID
 - Phone
+- Name
 - Address
 - Reference
 
-The Client History page should show clients in a table. The table should include ID, phone, name, address, and reference. Selecting a client row should open that client's summary.
+Selecting a client row opens that client's summary. Client search should support name, phone, address, and reference. The sort control should support ID, name, phone, address, and reference.
 
-Open question 4: Should client search support only name and phone, or should it also search by address and reference?
+Open questions:
 
-Answer: Yes, client search should support address and reference along with name and phone.
+Open question 10: Should client IDs be generated automatically?
 
-## 5. Client Summary
+Open Question 10 Answer: yes, client IDs should be generated automatically
 
-The Client Summary page should show the selected client's profile information, financial totals, action buttons, and a transaction table.
+Open question 11: Should search match partial text across all searchable fields at once?
 
-The top client information should include:
+Open Question 11 Answer: yes, search should match partial text across all searchable fields at once
+
+Open question 12: Should the client table show total due or available deposit directly in the list?
+
+Open Question 12 Answer: Yes, the client table should show total due and available deposit both directly in the list.
+
+## 5. New Client
+
+The New Client page allows the user to create a client. It includes:
+
+- Phone
+- Name
+- Address
+- Reference
+- Save action
+- Clear action
+- Back action to Client History
+
+After saving, the user should return to Client History or the new client's summary, depending on the final workflow decision.
+
+Open questions:
+
+Open question 13: After saving a new client, should the user go to Client History or directly to Client Summary?
+
+Open Question 13 Answer: After saving a new client,the user should go to directly to Client Summary.
+
+Open question 14: Should phone number be required before saving?
+
+Open Question 14 Answer: Yes, phone number should be required before saving.
+
+Open question 15: Should duplicate phone numbers be blocked or only warned about?
+
+Open Question 15 Answer: duplicate phone numbers should be blocked.
+
+## 6. Edit Client
+
+The Edit Client page allows the user to update an existing client's details. It includes:
+
+- Name
+- Phone
+- Address
+- Reference
+- Delete action
+- Save changes action
+- Back action to Client Summary
+
+Delete should require a confirmation step before removing the client.
+
+Open questions:
+
+Open question 16: Should deleting a client be blocked if the client has transactions?
+
+Open Question 16 Answer: deleting a client should be blocked if the client has transactions.
+
+Open question 17: Should client deletion archive the client instead of permanently removing it?
+
+Open Question 17 Answer: client deletion should archive the client instead of permanently removing it.
+
+Open question 18: Should edit history be tracked for client profile changes?
+
+Open Question 18 Answer: no, edit history should not be tracked for client profile changes.
+
+## 7. Client Summary
+
+The Client Summary page shows the selected client's profile, financial totals, transaction actions, and transaction history. It includes Print, Edit, and Back actions at the top.
+
+Client information should include:
 
 - Client Name
 - Phone
 - Address
 - Reference
 
-The summary totals should include:
+Summary totals should include:
 
 - Total deposit
+- Available Deposit
 - Total debt
-- Total use
+- Total Use
 
 The action area should include:
 
 - New Purchase
 - New Deposit
-- Cash memo date text
+- Misc Payment To Client
+- Cash memo date input
 - Generate cash-memo
 
-The transaction table should include date, description, taka, transaction type, and edit action. Transaction type should clearly identify the source of spending:
+The transaction table should include:
 
-- Spend, Rod
-- Spend, Cement
-- Spend, Other
-- Deposit
+- Date
+- Description
+- Delivery status
+- Taka
+- Transaction type
+- Edit
 
-Only "Spend," should be red. Rod should be blue, Cement should be green, and Other should be yellow.
+Transaction types should include Spend, Rod; Spend, Cement; Spend, Other; Deposit; and Paid to Client. Rod and cement sale rows can show delivery status as Completed or Pending. Financial totals should be calculated automatically from transaction rows.
 
-Open question 5: Should the financial totals be calculated from the transaction rows automatically, or entered manually for now?
+Open questions:
 
-Answer: Yes, the financial totals should be calculated from the transaction rows automatically.
+Open question 19: Should Available Deposit mean total deposit minus total use, or should it only count unused cash deposits?
 
-## 6. Purchases
+Open Question 19 Answer: Available Deposit should mean total deposit minus total use.
 
-The New Purchase flow should start from Product Selection. The user should choose one of:
+Open question 20: Should delivery status be shown for miscellaneous expense and deposit rows, or left blank as in the current wireframe?
+
+Open Question 20 Answer: delivery status should be left blank as in the current wireframe. Delivery status only applicable for rod and cement rows.
+
+Open question 21: Should Print on Client Summary print the whole summary or only the transaction table?
+
+Open Question 21 Answer: Print on Client Summary should print the whole summary.
+
+## 8. Product Selection
+
+The Product Selection page starts the new purchase flow from Client Summary. It allows the user to choose:
 
 - Rod
 - Cement
-- Other Expense
+- Misc Expense
 
-Rod and Cement purchases should use separate selection pages. Other Expense should use a simpler expense entry page.
+Rod and Cement purchases should stay separate by product type. Misc Expense represents a client past due expense.
 
-Open question 6: Should a single purchase be allowed to include both rod and cement together, or should each purchase stay separate by product type?
+Open questions:
 
-Answer: Each purchase should stay separate by product type.
+Open question 22: Should Product Selection show the selected client name so the user knows who the purchase belongs to?
 
-## 7. Rod Purchase Selection
+Open Question 22 Answer: Product Selection should show the selected client name so the user knows who the purchase belongs to.
 
-The Rod Selection page should collect rod purchase details in one bordered input group. Required fields include:
+Open question 23: Should the page prevent continuing if no client is selected?
+
+Open Question 23 Answer: yes, the page should prevent continuing if no client is selected
+
+Open question 24: Should Misc Expense remain in the purchase flow or move to a separate client adjustment area?
+
+Open Question 24 Answer: Misc Expense should move to a separate client adjustment area in client summary page.
+
+## 9. Rod Purchase Selection
+
+The Rod Selection page collects rod purchase information in one bordered input group. It includes:
 
 - R-brand
 - R-size
@@ -112,31 +242,32 @@ The Rod Selection page should collect rod purchase details in one bordered input
 - Total cost
 - Other expense
 - Other expense cost
+- Delivery Status
+- Add More action
+- Save action
+- Back action to Product Selection
 
-R-brand should be a dropdown with:
+R-brand options are BSRM, KSRM, and AKS. R-size options are 6mm, 8mm, 10mm, 12mm, 16mm, and 20mm.
 
-- BSRM
-- KSRM
-- AKS
+Total cost should be calculated automatically from Price/Kg and Total weight. The purchase should save back to the Client Summary page. Add More should support multiple rod entries in one rod purchase flow.
 
-R-size should be a dropdown with:
+Open questions:
 
-- 6mm
-- 8mm
-- 10mm
-- 12mm
-- 16mm
-- 20mm
+Open question 25: Should Delivery Status checked mean Completed and unchecked mean Pending?
 
-Total cost should be static and not editable. The page should include Add More and Save actions at the bottom.
+Open Question 25 Answer: yes, Delivery Status should checked mean Completed and unchecked mean Pending 
 
-Open question 7: Should total cost be automatically calculated from Price/Kg and Total weight?
+Open question 26: Should Other expense cost be added to the final transaction total?
 
-Answer: Yes, total cost should be automatically calculated from Price/Kg and Total weight.
+Open Question 26 Answer: yes, Other expense cost should be added to the final transaction total.
 
-## 8. Cement Purchase Selection
+Open question 27: Should each Add More rod entry create a separate transaction row or one combined transaction row?
 
-The Cement Selection page should collect cement purchase details in two bordered data groups. Each group should include:
+Open Question 27 Answer: each Add More rod entry should create a separate transaction row.
+
+## 10. Cement Purchase Selection
+
+The Cement Selection page collects cement purchase information in two bordered input groups. Each group includes:
 
 - CementBrand
 - price/bag
@@ -145,243 +276,566 @@ The Cement Selection page should collect cement purchase details in two bordered
 - Total price
 - other expense
 - cost
+- Delivery status
 
-Cement category should be a dropdown with:
+Cement category options are BM, AM, and OPC. CementBrand is currently fixed as SevenRings. Total price is fixed/read-only in the wireframe and should be calculated automatically from price/bag and Total cement bag.
 
-- BM
-- AM
-- OPC
+The two cement data groups represent two different cement entries in one purchase. The second group includes a Delete action. The page also includes Add More, Save, and Back actions.
 
-CementBrand and Total price should be fixed and not editable. The page should include Add More, Delete, and Save actions.
+Open questions:
 
-Open question 8: Should the two cement data groups represent two different cement entries in one purchase?
+Open question 28: Should CementBrand eventually support more brands, or stay fixed to SevenRings?
 
-Answer: Yes, the two cement data groups should represent two different cement entries in one purchase.
+Open Question 28 Answer:
 
-## 9. Other Expense
+Open question 29: Should each cement group have its own delivery status and expense cost?
 
-The Other Expense page should collect:
+Open Question 29 Answer:
+
+Open question 30: Should deleting a cement group require confirmation before removing it from the purchase form?
+
+Open Question 30 Answer:
+
+## 11. Misc Expense
+
+The Misc Expense page records a client's past due or miscellaneous expense. It includes:
 
 - Date
 - Description
 - Taka
+- Save action
+- Back action to Product Selection
 
-Default sample values should include:
+Misc Expense should not support separate categories such as carrying, labor, transport, or miscellaneous because it represents the client's past due expense.
 
-- Date: 12/12/25
-- Description: Other expense
-- Taka: 5000
+Open questions:
 
-The page should include Save and Back actions. It should not include a Delete button.
+Open question 31: Should this feature be renamed to Past Due Expense everywhere for clarity?
 
-Open question 9: Should Other Expense support categories such as carrying, labor, transport, or miscellaneous?
+Open Question 31 Answer:
 
-Answer: No, Other Expense should not support categories such as carrying, labor, transport, or miscellaneous because Other Expense means the client's past due expense.
+Open question 32: Should the default description be "Past expense" or should it always be entered manually?
 
-## 10. Transaction Editing
+Open Question 32 Answer:
 
-The system should provide editing pages for:
+Open question 33: Should Misc Expense affect stock in any way, or only client financial totals?
+
+Open Question 33 Answer:
+
+## 12. New Deposit
+
+The New Deposit page records money received from a client. It includes:
+
+- Date
+- Description
+- Taka
+- Save action
+- Back action to Client Summary
+
+Saving a deposit should return the user to Client Summary and update total deposit and available deposit.
+
+Open questions:
+
+Open question 34: Should deposit descriptions use a fixed list such as Cash, Bank, or Mobile Banking?
+
+Open Question 34 Answer:
+
+Open question 35: Should deposits support attachment or reference numbers later?
+
+Open Question 35 Answer:
+
+Open question 36: Should a deposit be allowed if the taka amount is zero or negative?
+
+Open Question 36 Answer:
+
+## 13. Misc Payment To Client
+
+The Misc Payment To Client page records money paid back to the client. It includes:
+
+- Date
+- Description
+- Take
+- Save action
+- Back action to Client Summary
+
+This creates a Paid to Client transaction type in the Client Summary. Paid to Client should reduce the client's available deposit or otherwise affect the client's balance according to the final accounting rule.
+
+Open questions:
+
+Open question 37: Should the field label be "Take", "Taka", or "Amount Paid"?
+
+Open Question 37 Answer:
+
+Open question 38: Should Paid to Client be allowed only when the client has an available deposit?
+
+Open Question 38 Answer:
+
+Open question 39: Should Paid to Client appear in cash memos?
+
+Open Question 39 Answer:
+
+## 14. Transaction Editing
+
+The system provides editing pages for:
 
 - Deposit
 - Rod expense
 - Cement expense
-- Other expense
+- Misc Expense
+- Misc Payment To Client
 
-Edit Rod Expense should include rod brand, R-size, price/kg, total weight, total cost, other expenses, other expense cost, and cost. Rod brand and R-size should be dropdowns. Total cost and Cost should be fixed and not editable.
+Edit Rod Expense includes rod brand, R-size, price/kg, total weight, total cost, other expenses, other expense cost, cost, delivery status, Delete, and Save changes.
 
-Edit Cement Expense should include cement brand, price/bag, cement category, total cement bag, total price, other expense, other expense cost, and cost. Cement category should be a dropdown. Cement brand, total price, and cost should be fixed and not editable.
+Edit Cement Expense includes cement brand, price/bag, cement category, total cement bag, total price, other expense, other expense cost, cost, delivery status, Delete, and Save changes.
 
-Edit Other Expense should include date, description, and taka. Default sample values should include Date 12/12/25, Description Other Expense, and Taka 5000.
+Edit Deposit includes date, description, taka, Delete, and Save changes.
 
-Open question 10: Should edit pages allow deleting saved records, or should delete actions require a confirmation step?
+Edit Misc Expense includes date, description, taka, Delete, and Save changes.
 
-Answer: Delete actions should require a confirmation step.
+Edit Misc Payment To Client includes date, description, taka, Delete, and Save changes.
 
-## 11. Cash Memo
+Delete actions should require a confirmation step.
 
-The Cash Memo page should be opened from the Client Summary page after pressing Generate cash-memo. It should show client information at the top:
+Open questions:
 
-- Name
+Open question 40: Should editing rod or cement purchases update inventory stock immediately?
+
+Open Question 40 Answer:
+
+Open question 41: Should delivery status changes update stock, client balance, or both?
+
+Open Question 41 Answer:
+
+Open question 42: Should transaction edit pages show the original created date separately from the editable transaction date?
+
+Open Question 42 Answer:
+
+## 15. Cash Memo
+
+The Cash Memo page opens from Client Summary after pressing Generate cash-memo. It shows:
+
+- Cash memo title
+- Print button
+- Back button to Client Summary
+- Client name
 - Address
 - Phone
 - Date
+- Memo table
+- Buyer signature area
+- Seller signature area
 
-The memo table should show:
+The memo table includes:
 
 - Description
 - Amount
 - Cost/Unit
 - Total Cost
 
-It should include rows for past due, product purchase, total due, deposit, and current due. The page should also include buyer and seller signature areas and a Print button before the table section.
+It should include rows for past due, product purchase, total due, deposit, and current due. The cash memo should be printable only.
 
-Open question 11: Should the cash memo be printable only, or should it also be downloadable as a PDF?
+Open questions:
 
-Answer: The cash memo should be printable only.
+Open question 43: Should cash memo include only transactions up to the selected memo date?
 
-## 12. Product Store Details
+Open Question 43 Answer:
 
-The Product Details page should allow the user to choose between Rod and Cement store details.
+Open question 44: Should pending delivery items appear on the cash memo?
 
-Rod Store Details should show rod inventory rows with:
+Open Question 44 Answer:
+
+Open question 45: Should the memo show shop information at the top?
+
+Open Question 45 Answer:
+
+## 16. Product Store Details
+
+The Product Store Details page is the Store House entry page from the dashboard. It allows the user to choose:
+
+- Rod
+- Cement
+
+It includes a Back action to the dashboard.
+
+Open questions:
+
+Open question 46: Should Store House show stock alerts before choosing Rod or Cement?
+
+Open Question 46 Answer:
+
+Open question 47: Should Store House include a combined printable stock summary?
+
+Open Question 47 Answer:
+
+Open question 48: Should other product categories be supported later, or only rod and cement?
+
+Open Question 48 Answer:
+
+## 17. Rod Store Details
+
+The Rod Store Details page shows rod inventory rows. It includes:
+
+- Load Rod action
+- Print action
+- Back action to Product Store Details
+- Rod inventory table
+
+The rod inventory table includes:
 
 - R-size
 - Brand
 - Remaining Weight
-- Add rod
 
-R-size and Brand should be dropdowns. Selecting a row should open Rod Stock. Add should open the Add Rod Store page.
+The table no longer has dropdown fields or an Add rod column. Selecting a row opens the Rod Stock page for that rod size and brand.
 
-Cement Store Details should show cement inventory rows with:
+Open questions:
 
-- Brand-Name
-- Categories
-- Current amount
-- Add
+Open question 49: Should Print on Rod Store Details include all rod inventory rows?
 
-Categories should be a dropdown. Selecting a row should open Cement Stock. Add should open the Add Cement Store page.
+Open Question 49 Answer:
 
-Open question 12: Should changing dropdown values in these tables update the stock item, or are they only visual placeholders for the wireframe?
+Open question 50: Should Remaining Weight be displayed in kg only?
 
-Answer: They are only visual placeholders for the wireframe. The feature has also been updated, and the tables currently have no dropdown features.
+Open Question 50 Answer:
 
-## 13. Rod Stock
+Open question 51: Should the table support filtering by brand or size?
 
-The Rod Stock page should show rod history for a selected rod size and brand. It should include a history label, remaining stock summary, and a stock history table.
+Open Question 51 Answer:
 
-The table should include:
+## 18. Load Rod
+
+The Load Rod page adds rod stock. It includes:
+
+- R-size
+- Brand
+- Load Weight
+- Cancel action
+- Save action
+
+R-size options are 6mm, 8mm, 10mm, 12mm, 16mm, and 20mm. Brand options are BSRM, KSRM, and AKS. Saving should return to Rod Store Details.
+
+Open questions:
+
+Open question 52: Should Load Rod allow multiple load entries at once?
+
+Open Question 52 Answer:
+
+Open question 53: Should Load Weight accept only numeric kg values?
+
+Open Question 53 Answer:
+
+Open question 54: Should loading rod create a stock history row with status Load automatically?
+
+Open Question 54 Answer:
+
+## 19. Rod Stock
+
+The Rod Stock page shows stock history for a selected rod size and brand. It includes:
+
+- Selected rod size and brand title
+- Total load value
+- Total sell value
+- Remaining stock value
+- Print action
+- Back action to Rod Store Details
+- Stock history table
+
+The stock history table includes:
 
 - Date
 - Status
 - Weight
 - Edit
 
-Edit buttons should appear only for load rows, not sell rows. Pressing Edit on a load row should open the Edit Loaded Rod Date and Weight page.
+Edit buttons appear only for load rows, not sell rows. Sell rows should link back to the client transaction that created the sale. Deleting a loaded rod entry should reduce the Total Load remaining stock immediately.
 
-Open question 13: Should sell rows link back to the client transaction that created the sale?
+Open questions:
 
-Answer: Yes, sell rows should link back to the client transaction that created the sale.
+Open question 55: Should sell rows open Client Summary or the specific rod transaction edit page?
 
-## 14. Edit Loaded Rod
+Open Question 55 Answer:
 
-The Edit Loaded Rod Date and Weight page should include:
+Open question 56: Should Total sell include only completed deliveries or all rod sale transactions?
 
-- Date input
-- Status static value: load
-- Weight input
+Open Question 56 Answer:
 
-It should include Back, Delete, and Save actions. Back, Delete, and Save should return to the Rod Stock page.
+Open question 57: Should a warning appear when remaining stock becomes negative?
 
-Open question 14: Should deleting a loaded rod entry reduce the remaining stock immediately?
+Open Question 57 Answer:
 
-Answer: Yes, deleting a loaded rod entry should reduce the Total Load remaining stock immediately.
+## 20. Edit Loaded Rod
 
-## 15. Cement Stock
+The Edit Loaded Rod page allows the user to update or delete a rod load stock history row. It includes:
 
-The Cement Stock page should show cement history for a selected brand and category. It should include the label "BM(SevenRings) History", remaining amount summary, and a stock history table.
+- Date
+- Static status value: load
+- Weight
+- Delete action
+- Save action
+- Back action to Rod Stock
 
-The table should include:
+Delete should require confirmation. Save and Delete should return to Rod Stock.
+
+Open questions:
+
+Open question 58: Should the static status label use "load" or "Load" in the final UI?
+
+Open Question 58 Answer:
+
+Open question 59: Should changing loaded weight be blocked if later sales depend on that stock?
+
+Open Question 59 Answer:
+
+Open question 60: Should the edit page show the selected rod brand and size?
+
+Open Question 60 Answer:
+
+## 21. Cement Store Details
+
+The Cement Store Details page shows cement inventory rows. It includes:
+
+- Load Cement action
+- Print action
+- Back action to Product Store Details
+- Cement inventory table
+
+The cement inventory table includes:
+
+- Brand-Name
+- Categories
+- Current amount
+
+The table no longer has dropdown fields or an Add column. Selecting a row opens the Cement Stock page for that brand and category.
+
+Open questions:
+
+Open question 61: Should Print on Cement Store Details include all cement categories?
+
+Open Question 61 Answer:
+
+Open question 62: Should Current amount always mean bag count?
+
+Open Question 62 Answer:
+
+Open question 63: Should the table support filtering if more cement brands are added later?
+
+Open Question 63 Answer:
+
+## 22. Load Cement
+
+The Load Cement page adds cement stock. It includes:
+
+- Brand-name
+- Categories
+- Load amount
+- Cancel action
+- Save action
+
+The current brand option is Seven-Rings. Category options are BM, AM, and OPC. Saving should return to Cement Store Details.
+
+Open questions:
+
+Open question 64: Should Load Cement allow multiple cement load entries at once?
+
+Open Question 64 Answer:
+
+Open question 65: Should Load amount accept only whole bag counts?
+
+Open Question 65 Answer:
+
+Open question 66: Should loading cement create a stock history row with status Load automatically?
+
+Open Question 66 Answer:
+
+## 23. Cement Stock
+
+The Cement Stock page shows stock history for a selected cement brand and category. It includes:
+
+- Selected brand and category title
+- Total load value
+- Total sell value
+- Remaining stock value
+- Print action
+- Back action to Cement Store Details
+- Stock history table
+
+The stock history table includes:
 
 - Date
 - Status
-- Remaining
+- Quantity
 - Edit
 
-Edit buttons should appear only for load rows, not sell rows. Pressing Edit on a load row should open the Edit Stored Cement page.
+Edit buttons appear only for load rows, not sell rows. Cement stock should be tracked by bag count only. Deleting stored cement should require checking whether any later sales depend on that stock.
 
-Open question 15: Should cement stock be tracked by bag count only, or should it also track purchase price by batch?
+Open questions:
 
-Answer: Cement stock should be tracked by bag count only.
+Open question 67: Should sell rows open Client Summary or the specific cement transaction edit page?
 
-## 16. Edit Stored Cement
+Open Question 67 Answer:
 
-The Edit Stored Cement page should include:
+Open question 68: Should Total sell include only completed deliveries or all cement sale transactions?
 
-- Date input
-- Status static value: load
-- Remaining input
+Open Question 68 Answer:
 
-It should include Back, Delete, and Save actions. Back, Delete, and Save should return to the Cement Stock page.
+Open question 69: Should stock history use "Quantity" everywhere instead of "Remaining"?
 
-Open question 16: Should deleting stored cement require checking whether any later sales depend on that stock?
+Open Question 69 Answer:
 
-Answer: Yes, deleting stored cement should require checking whether any later sales depend on that stock.
+## 24. Edit Stored Cement
 
-## 17. Add Rod Store
+The Edit Stored Cement page allows the user to update or delete a cement load stock history row. It includes:
 
-The Add Rod page should allow the user to add rod stock information. It should include fields for rod brand, rod size, and rod weight. It should include Delete and Save actions. Delete and Save should return to Rod Store Details.
+- Date
+- Static status value: load
+- Remaining
+- Delete action
+- Save action
+- Back action to Cement Stock
 
-Open question 17: Should Add Rod support adding multiple rod entries at once?
+Delete should require confirmation. Save and Delete should return to Cement Stock.
 
-Answer: Add Rod should support adding multiple rod entries at once.
+Open questions:
 
-## 18. Add Cement Store
+Open question 70: Should the editable quantity field be named Remaining, Quantity, or Load amount?
 
-The Add Cement Store page should allow the user to add cement stock information. Brand-Name and Categories should be fixed/static. Amount should be editable. The page should include Delete and Save actions. Delete and Save should return to Cement Store Details.
+Open Question 70 Answer:
 
-Open question 18: Should Add Cement Store automatically use the selected brand/category from the Cement Store Details row?
+Open question 71: Should changing stored cement be blocked if later sales depend on that stock?
 
-Answer: This feature has been updated; there is no Add button.
+Open Question 71 Answer:
 
-## 19. Advanced Settings
+Open question 72: Should the edit page show the selected cement brand and category?
 
-Advanced Settings should be accessible from the dashboard settings control. The page should include:
+Open Question 72 Answer:
+
+## 25. Advanced Settings
+
+Advanced Settings is accessible from the dashboard settings control. It includes:
 
 - Logged In Device
 - Data Restore
 - Data backup
 - Logout
+- Back action to Dashboard
 
-Each option should open its related page or perform its related action. Back should return to the dashboard.
+Logout should ask for confirmation before returning to the login page.
 
-Open question 19: Should Logout ask for confirmation before returning to the login page?
+Open questions:
 
-Answer: Yes, Logout should ask for confirmation before returning to the login page.
+Open question 73: Should Logout appear as a destructive action visually?
 
-## 20. Logged In Device
+Open Question 73 Answer:
 
-The Logged In Device page should show a table of active or previously logged-in devices. Each row should include device details and a Remove button. The Remove button should only be shown as a button in the wireframe and should not remove any device yet.
+Open question 74: Should settings include shop profile or brand customization later?
 
-Open question 20: Should the final system allow removing other devices remotely?
+Open Question 74 Answer:
 
-Answer: Yes, the final system should allow removing other devices remotely.
+Open question 75: Should backup and restore be grouped under a Data Management heading?
 
-## 21. Data Backup
+Open Question 75 Answer:
 
-The Data Backup page should allow the user to prepare or download a backup of shop data. The page should communicate that backup data may include clients, transactions, stock, and settings.
+## 26. Logged In Device
 
-Open question 21: What backup format do you prefer: Excel/CSV, JSON, or database file?
+The Logged In Device page shows active or previously logged-in devices. It includes:
 
-Answer: Excel/CSV file is preferred.
+- Device Name
+- Location
+- Last Active
+- Status
+- Remove action
+- Back action to Advanced Settings
 
-## 22. Data Restore
+The final system should allow removing other devices remotely.
 
-The Data Restore page should allow the user to choose a backup file and restore previous shop data. Because restore can replace current records, the page should clearly warn the user before restoration.
+Open questions:
 
-Open question 22: Should restore replace all current data, or merge backup data with existing data?
+Open question 76: Should the current device be removable?
 
-Answer: Restore should merge backup data with existing data.
+Open Question 76 Answer:
 
-## 23. Navigation Rules
+Open question 77: Should device location be exact location, city only, or user-entered text?
+
+Open Question 77 Answer:
+
+Open question 78: Should removing a device require confirmation?
+
+Open Question 78 Answer:
+
+## 27. Data Backup
+
+The Data Backup page allows the user to prepare or download a backup of shop data. Backup data may include clients, transactions, stock, and settings.
+
+The preferred backup format is Excel/CSV.
+
+Open questions:
+
+Open question 79: Should backup create one Excel workbook with multiple sheets or separate CSV files?
+
+Open Question 79 Answer:
+
+Open question 80: Should backup include printed memo history if that exists later?
+
+Open Question 80 Answer:
+
+Open question 81: Should backup files include the backup date in the filename?
+
+Open Question 81 Answer:
+
+## 28. Data Restore
+
+The Data Restore page allows the user to choose a backup file and restore shop data. Restore should merge backup data with existing data.
+
+Because restore can affect existing records, the page should clearly warn the user before restoration.
+
+Open questions:
+
+Open question 82: When duplicate records are found, should restore skip, overwrite, or create a duplicate copy?
+
+Open Question 82 Answer:
+
+Open question 83: Should restore preview the number of clients, transactions, and stock rows before confirming?
+
+Open Question 83 Answer:
+
+Open question 84: Should restore require a second confirmation step?
+
+Open Question 84 Answer:
+
+## 29. Navigation Rules
 
 Navigation should stay clear and predictable:
 
 - Login opens Dashboard
-- Dashboard opens client, product, and settings areas
-- Client History opens Client Summary
-- Client Summary opens purchases, deposit, edit pages, and cash memo
-- Product Details opens rod and cement store areas
-- Stock pages return to their store details pages
-- Edit stock pages return to their stock pages
+- Dashboard opens Client History, Store House, and Advanced Settings
+- Client History opens New Client and Client Summary
+- Client Summary opens Product Selection, New Deposit, Misc Payment To Client, edit pages, Cash Memo, and Edit Client
+- Product Selection opens Rod Selection, Cement Selection, and Misc Expense
+- Product Store Details opens Rod Store Details and Cement Store Details
+- Rod Store Details opens Load Rod and Rod Stock
+- Cement Store Details opens Load Cement and Cement Stock
+- Stock pages open edit pages only for load rows
 - Settings pages return to Advanced Settings or Dashboard as appropriate
 
-Open question 23: Should every page include a Back button, even if the browser back button is available?
+Every page should include a Back, Cancel, or equivalent return action, even if the browser back button is available.
 
-Answer: Yes, every page should include a Back button, even if the browser back button is available.
+Open questions:
 
-## 24. Visual And Interaction Guidelines
+Open question 85: Should Cancel and Back be standardized into one label?
 
-The interface should follow the existing wireframe style:
+Open Question 85 Answer:
+
+Open question 86: Should Save actions always return to the previous page?
+
+Open Question 86 Answer:
+
+Open question 87: Should Print actions keep the user on the same page after printing?
+
+Open Question 87 Answer:
+
+## 30. Visual And Interaction Guidelines
+
+The interface should follow the current wireframe style:
 
 - Centered card layouts
 - Bootstrap-style form controls and buttons
@@ -389,9 +843,21 @@ The interface should follow the existing wireframe style:
 - Simple action buttons
 - Bordered boxes for grouped input fields
 - Static fields styled like form controls when values should not be edited
+- Print actions on summary and stock pages
+- Delivery status shown with clear Completed and Pending labels
 
-The design should remain practical and operational rather than decorative.
+The design should remain practical and operational rather than decorative. The final system should receive a custom brand style later.
 
-Open question 24: Do you want the final design to stay close to Bootstrap defaults, or should it receive a custom brand style later?
+Open questions:
 
-Answer: It should receive a custom brand style later.
+Open question 88: What custom brand colors should replace the current Bootstrap-style defaults?
+
+Open Question 88 Answer:
+
+Open question 89: Should Completed and Pending use text only, badges, or icons?
+
+Open Question 89 Answer:
+
+Open question 90: Should printable pages use a different cleaner print layout than screen pages?
+
+Open Question 90 Answer:
