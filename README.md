@@ -255,7 +255,7 @@ Open questions:
 
 Open question 25: Should Delivery Status checked mean Completed and unchecked mean Pending?
 
-Open Question 25 Answer: yes, Delivery Status should checked mean Completed and unchecked mean Pending 
+Open Question 25 Answer: yes, Delivery Status should checked mean Completed and unchecked mean Pending
 
 Open question 26: Should Other expense cost be added to the final transaction total?
 
@@ -286,15 +286,15 @@ Open questions:
 
 Open question 28: Should CementBrand eventually support more brands, or stay fixed to SevenRings?
 
-Open Question 28 Answer:
+Open Question 28 Answer: CementBrand eventually should stay fixed to SevenRings.
 
 Open question 29: Should each cement group have its own delivery status and expense cost?
 
-Open Question 29 Answer:
+Open Question 29 Answer: each cement group should have its own delivery status and expense cost.
 
 Open question 30: Should deleting a cement group require confirmation before removing it from the purchase form?
 
-Open Question 30 Answer:
+Open Question 30 Answer: deleting a cement group should require confirmation before removing it from the purchase form.
 
 ## 11. Misc Expense
 
@@ -312,15 +312,15 @@ Open questions:
 
 Open question 31: Should this feature be renamed to Past Due Expense everywhere for clarity?
 
-Open Question 31 Answer:
+Open Question 31 Answer: Yes, This feature should be renamed to Past Due Expense everywhere for clarity.
 
 Open question 32: Should the default description be "Past expense" or should it always be entered manually?
 
-Open Question 32 Answer:
+Open Question 32 Answer: the default description should it always be entered manually.
 
 Open question 33: Should Misc Expense affect stock in any way, or only client financial totals?
 
-Open Question 33 Answer:
+Open Question 33 Answer: Misc Expense should not affect stock in any way and also its only client financial totals.
 
 ## 12. New Deposit
 
@@ -338,15 +338,15 @@ Open questions:
 
 Open question 34: Should deposit descriptions use a fixed list such as Cash, Bank, or Mobile Banking?
 
-Open Question 34 Answer:
+Open Question 34 Answer: Yes, deposit descriptions should use a fixed list such as Cash, Bank, or Mobile Banking.
 
 Open question 35: Should deposits support attachment or reference numbers later?
 
-Open Question 35 Answer:
+Open Question 35 Answer: Maybe later on feature deposits support attachment or reference numbers, but for now, its ok.
 
 Open question 36: Should a deposit be allowed if the taka amount is zero or negative?
 
-Open Question 36 Answer:
+Open Question 36 Answer: No, a deposit shouldn't be allowed if the taka amount is zero or negative
 
 ## 13. Misc Payment To Client
 
@@ -364,15 +364,15 @@ Open questions:
 
 Open question 37: Should the field label be "Take", "Taka", or "Amount Paid"?
 
-Open Question 37 Answer:
+Open Question 37 Answer: The field label should be Taka.
 
 Open question 38: Should Paid to Client be allowed only when the client has an available deposit?
 
-Open Question 38 Answer:
+Open Question 38 Answer: Yes, Paid to Client should be allowed only when the client has an available deposit and after paid to client Total deposit should be reduce by the same amount.
 
 Open question 39: Should Paid to Client appear in cash memos?
 
-Open Question 39 Answer:
+Open Question 39 Answer: Yes, Paid to Client should appear in cash memos.
 
 ## 14. Transaction Editing
 
@@ -400,15 +400,15 @@ Open questions:
 
 Open question 40: Should editing rod or cement purchases update inventory stock immediately?
 
-Open Question 40 Answer:
+Open Question 40 Answer: Yes, editing rod or cement purchases should update inventory stock immediately.
 
 Open question 41: Should delivery status changes update stock, client balance, or both?
 
-Open Question 41 Answer:
+Open Question 41 Answer: Delivery status should changes update stock, not client balance.
 
 Open question 42: Should transaction edit pages show the original created date separately from the editable transaction date?
 
-Open Question 42 Answer:
+Open Question 42 Answer: No, transaction edit pages should not show the original created date separately from the editable transaction date
 
 ## 15. Cash Memo
 
@@ -438,15 +438,15 @@ Open questions:
 
 Open question 43: Should cash memo include only transactions up to the selected memo date?
 
-Open Question 43 Answer:
+Open Question 43 Answer: Yes, cash memo should include only transactions up to the selected memo date.
 
 Open question 44: Should pending delivery items appear on the cash memo?
 
-Open Question 44 Answer:
+Open Question 44 Answer: Yes, pending delivery items should appear on the cash memo, but delivery status should not be mentioned there.
 
 Open question 45: Should the memo show shop information at the top?
 
-Open Question 45 Answer:
+Open Question 45 Answer: Yes, the memo should show shop information at the top center.
 
 ## 16. Product Store Details
 
@@ -461,15 +461,15 @@ Open questions:
 
 Open question 46: Should Store House show stock alerts before choosing Rod or Cement?
 
-Open Question 46 Answer:
+Open Question 46 Answer: Store House should show stock alerts before choosing Rod or Cement.
 
 Open question 47: Should Store House include a combined printable stock summary?
 
-Open Question 47 Answer:
+Open Question 47 Answer: Store House should include a separate printable stock summary.
 
 Open question 48: Should other product categories be supported later, or only rod and cement?
 
-Open Question 48 Answer:
+Open Question 48 Answer: It should only support rod and cement.
 
 ## 17. Rod Store Details
 
@@ -492,15 +492,15 @@ Open questions:
 
 Open question 49: Should Print on Rod Store Details include all rod inventory rows?
 
-Open Question 49 Answer:
+Open Question 49 Answer: yes, Print on Rod Store Details should include all rod inventory rows.
 
 Open question 50: Should Remaining Weight be displayed in kg only?
 
-Open Question 50 Answer:
+Open Question 50 Answer: yes, Remaining Weight should be displayed in kg only
 
 Open question 51: Should the table support filtering by brand or size?
 
-Open Question 51 Answer:
+Open Question 51 Answer: Yes, the table should support filtering by brand or size.
 
 ## 18. Load Rod
 
@@ -518,15 +518,15 @@ Open questions:
 
 Open question 52: Should Load Rod allow multiple load entries at once?
 
-Open Question 52 Answer:
+Open Question 52 Answer: No, Load Rod shouldn't allow multiple load entries at once.
 
 Open question 53: Should Load Weight accept only numeric kg values?
 
-Open Question 53 Answer:
+Open Question 53 Answer: Yes, Load Weight should accept only numeric kg values.
 
 Open question 54: Should loading rod create a stock history row with status Load automatically?
 
-Open Question 54 Answer:
+Open Question 54 Answer: yes, loading rod should create a stock history row with status Load automatically.
 
 ## 19. Rod Stock
 
@@ -553,15 +553,15 @@ Open questions:
 
 Open question 55: Should sell rows open Client Summary or the specific rod transaction edit page?
 
-Open Question 55 Answer:
+Open Question 55 Answer: No, sell rows shouldn't open Client Summary or the specific rod transaction edit page.
 
 Open question 56: Should Total sell include only completed deliveries or all rod sale transactions?
 
-Open Question 56 Answer:
+Open Question 56 Answer: Total sell should include only completed deliveries.
 
 Open question 57: Should a warning appear when remaining stock becomes negative?
 
-Open Question 57 Answer:
+Open Question 57 Answer: a warning should appear when remaining stock becomes negative and block to complete any rod sell transaction.
 
 ## 20. Edit Loaded Rod
 
@@ -580,15 +580,15 @@ Open questions:
 
 Open question 58: Should the static status label use "load" or "Load" in the final UI?
 
-Open Question 58 Answer:
+Open Question 58 Answer: the static status label should use "Load" in the final UI.
 
 Open question 59: Should changing loaded weight be blocked if later sales depend on that stock?
 
-Open Question 59 Answer:
+Open Question 59 Answer: No, changing loaded weight shouldn't be blocked if later sales depend on that stock
 
 Open question 60: Should the edit page show the selected rod brand and size?
 
-Open Question 60 Answer:
+Open Question 60 Answer: Yes, the edit page should show the selected rod brand and size.
 
 ## 21. Cement Store Details
 
@@ -611,15 +611,15 @@ Open questions:
 
 Open question 61: Should Print on Cement Store Details include all cement categories?
 
-Open Question 61 Answer:
+Open Question 61 Answer: Print on Cement Store Details should include all cement categories.
 
 Open question 62: Should Current amount always mean bag count?
 
-Open Question 62 Answer:
+Open Question 62 Answer: Current amount should always mean bag count.
 
 Open question 63: Should the table support filtering if more cement brands are added later?
 
-Open Question 63 Answer:
+Open Question 63 Answer: Yes, if later on more cement brands are added then the table should support filtering.
 
 ## 22. Load Cement
 
@@ -637,15 +637,15 @@ Open questions:
 
 Open question 64: Should Load Cement allow multiple cement load entries at once?
 
-Open Question 64 Answer:
+Open Question 64 Answer: No, Load Cement shouldn't allow multiple cement load entries at once.
 
 Open question 65: Should Load amount accept only whole bag counts?
 
-Open Question 65 Answer:
+Open Question 65 Answer: yes, Load amount should accept only whole bag counts.
 
 Open question 66: Should loading cement create a stock history row with status Load automatically?
 
-Open Question 66 Answer:
+Open Question 66 Answer: Yes, loading cement should create a stock history row with status Load automatically.
 
 ## 23. Cement Stock
 
@@ -672,15 +672,15 @@ Open questions:
 
 Open question 67: Should sell rows open Client Summary or the specific cement transaction edit page?
 
-Open Question 67 Answer:
+Open Question 67 Answer: No, sell rows shouldn't open Client Summary or the specific cement transaction edit page.
 
 Open question 68: Should Total sell include only completed deliveries or all cement sale transactions?
 
-Open Question 68 Answer:
+Open Question 68 Answer: Total sell should include only completed deliveries.
 
 Open question 69: Should stock history use "Quantity" everywhere instead of "Remaining"?
 
-Open Question 69 Answer:
+Open Question 69 Answer: Yes, stock history should use "Quantity" everywhere instead of "Remaining".
 
 ## 24. Edit Stored Cement
 
@@ -699,15 +699,15 @@ Open questions:
 
 Open question 70: Should the editable quantity field be named Remaining, Quantity, or Load amount?
 
-Open Question 70 Answer:
+Open Question 70 Answer: the editable quantity field should be named Quantity.
 
 Open question 71: Should changing stored cement be blocked if later sales depend on that stock?
 
-Open Question 71 Answer:
+Open Question 71 Answer: No, changing stored cement shouldn't be blocked if later sales depend on that stock.
 
 Open question 72: Should the edit page show the selected cement brand and category?
 
-Open Question 72 Answer:
+Open Question 72 Answer: Yes, the edit page should show the selected cement brand and category.
 
 ## 25. Advanced Settings
 
@@ -725,15 +725,15 @@ Open questions:
 
 Open question 73: Should Logout appear as a destructive action visually?
 
-Open Question 73 Answer:
+Open Question 73 Answer: Logout shouldn't appear as a destructive action visually.
 
 Open question 74: Should settings include shop profile or brand customization later?
 
-Open Question 74 Answer:
+Open Question 74 Answer: settings should be included shop profile or brand customization.
 
 Open question 75: Should backup and restore be grouped under a Data Management heading?
 
-Open Question 75 Answer:
+Open Question 75 Answer: backup and restore should be grouped under a Data Management heading.
 
 ## 26. Logged In Device
 
@@ -752,15 +752,15 @@ Open questions:
 
 Open question 76: Should the current device be removable?
 
-Open Question 76 Answer:
+Open Question 76 Answer: the current device shouldn't be removable.
 
 Open question 77: Should device location be exact location, city only, or user-entered text?
 
-Open Question 77 Answer:
+Open Question 77 Answer: device location should be exact location or minimum city.
 
 Open question 78: Should removing a device require confirmation?
 
-Open Question 78 Answer:
+Open Question 78 Answer: removing a device should require confirmation.
 
 ## 27. Data Backup
 
