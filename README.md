@@ -772,15 +772,15 @@ Open questions:
 
 Open question 79: Should backup create one Excel workbook with multiple sheets or separate CSV files?
 
-Open Question 79 Answer:
+Open Question 79 Answer: backup should create separate CSV files.
 
 Open question 80: Should backup include printed memo history if that exists later?
 
-Open Question 80 Answer:
+Open Question 80 Answer: No, backup shouldn't include printed memo history if that exists later.
 
 Open question 81: Should backup files include the backup date in the filename?
 
-Open Question 81 Answer:
+Open Question 81 Answer: yes, backup files should include the backup date in the filename.
 
 ## 28. Data Restore
 
@@ -792,15 +792,15 @@ Open questions:
 
 Open question 82: When duplicate records are found, should restore skip, overwrite, or create a duplicate copy?
 
-Open Question 82 Answer:
+Open Question 82 Answer: When duplicate records are found, it should be overwritten.
 
 Open question 83: Should restore preview the number of clients, transactions, and stock rows before confirming?
 
-Open Question 83 Answer:
+Open Question 83 Answer: Yes, restore should preview the number of clients, transactions, and stock rows before confirming.
 
 Open question 84: Should restore require a second confirmation step?
 
-Open Question 84 Answer:
+Open Question 84 Answer: restore should require a second confirmation step.
 
 ## 29. Navigation Rules
 
@@ -823,15 +823,15 @@ Open questions:
 
 Open question 85: Should Cancel and Back be standardized into one label?
 
-Open Question 85 Answer:
+Open Question 85 Answer: No, Cancel and Back shouldn't be standardized into one label.
 
 Open question 86: Should Save actions always return to the previous page?
 
-Open Question 86 Answer:
+Open Question 86 Answer: Save actions should always follow the next step.
 
 Open question 87: Should Print actions keep the user on the same page after printing?
 
-Open Question 87 Answer:
+Open Question 87 Answer: Yes, Print actions should keep the user on the same page after printing
 
 ## 30. Visual And Interaction Guidelines
 
@@ -852,12 +852,12 @@ Open questions:
 
 Open question 88: What custom brand colors should replace the current Bootstrap-style defaults?
 
-Open Question 88 Answer:
+Open Question 88 Answer: Not yet decided.
 
 Open question 89: Should Completed and Pending use text only, badges, or icons?
 
-Open Question 89 Answer:
+Open Question 89 Answer: Completed and Pending should be badges.
 
 Open question 90: Should printable pages use a different cleaner print layout than screen pages?
 
-Open Question 90 Answer:
+Open Question 90 Answer: yes, printable pages should use a different cleaner print layout than screen pages.
