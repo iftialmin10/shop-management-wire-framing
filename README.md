@@ -22,11 +22,11 @@ Open Question 3 Answer: Sample data should stay visible in the wireframe.
 
 Open question 4: Should the app require internet access, or should it work offline after login?
 
-Open Question 4 Answer:
+Open Question 4 Answer: the app should require internet access.
 
 Open question 5: Should Bengali labels be switchable per user, or should the language setting apply to the whole shop?
 
-Open Question 5 Answer:
+Open Question 5 Answer: the language setting should apply to the whole shop
 
 ## 2. Entry And Login Experience
 
@@ -50,7 +50,7 @@ Open Question 8 Answer: failed login attempts should show a simple error message
 
 Open question 9: Should the system support multiple user accounts later even if separate owner, manager, and staff roles are not needed now?
 
-Open Question 9 Answer:
+Open Question 9 Answer: Yes, later on the system should support multiple user accounts
 
 ## 3. Dashboard
 
@@ -76,7 +76,7 @@ Open Question 11 Answer: stock alerts should include both rod and cement.
 
 Open question 12: Should the dashboard include a date filter for summary totals?
 
-Open Question 12 Answer: the dashboard should include a date filter for summary totals
+Open Question 12 Answer: the dashboard should include a date filter for summary totals.
 
 ## 4. Client History
 
@@ -114,7 +114,7 @@ Open Question 15 Answer: Yes, the client table should show total due and availab
 
 Open question 16: Should deleted or archived clients still appear in search results with an archived label?
 
-Open Question 16 Answer:
+Open Question 16 Answer: No, deleted or archived clients shouldn't appear in search results with an archived label.
 
 ## 5. New Client
 
@@ -146,7 +146,7 @@ Open Question 19 Answer: duplicate phone numbers should be blocked.
 
 Open question 20: Should phone numbers follow a Bangladesh mobile number format validation rule?
 
-Open Question 20 Answer:
+Open Question 20 Answer: Yes, phone numbers should follow a Bangladesh mobile number format validation rule
 
 ## 6. Edit Client
 
@@ -178,7 +178,7 @@ Open Question 23 Answer: no, edit history should not be tracked for client profi
 
 Open question 24: Should archived clients be restorable later?
 
-Open Question 24 Answer:
+Open Question 24 Answer: No, archived clients shouldn't be restorable later
 
 ## 7. Client Summary
 
@@ -233,7 +233,7 @@ Open Question 27 Answer: Print on Client Summary should print the whole summary.
 
 Open question 28: Should client balances show negative available deposit as due amount, or should due and available deposit always be displayed separately?
 
-Open Question 28 Answer:
+Open Question 28 Answer: due and available deposit should always be displayed separately
 
 ## 8. Product Selection
 
@@ -261,7 +261,7 @@ Open Question 31 Answer: Misc Expense should move to a separate client adjustmen
 
 Open question 32: Should transaction descriptions be auto-generated for rod and cement purchases, manually editable, or both?
 
-Open Question 32 Answer:
+Open Question 32 Answer: transaction descriptions should be auto-generated for rod and cement purchases
 
 ## 9. Rod Purchase Selection
 
@@ -299,7 +299,7 @@ Open Question 35 Answer: each Add More rod entry should create a separate transa
 
 Open question 36: Should the system prevent saving rod or cement sales when the delivery status is Completed but available stock is insufficient?
 
-Open Question 36 Answer:
+Open Question 36 Answer: Yes, the system should prevent saving rod or cement sales when the delivery status is Completed but available stock is insufficient
 
 ## 10. Cement Purchase Selection
 
@@ -448,19 +448,19 @@ Open Question 51 Answer: No, transaction edit pages should not show the original
 
 Open question 52: Should all dates default to today's date when creating deposits, purchases, payments, stock loads, and edits?
 
-Open Question 52 Answer:
+Open Question 52 Answer: all dates should default to today's date when creating deposits, purchases, payments, stock loads, and edits.
 
 Open question 53: Should users be allowed to edit the date of a saved transaction after it has been created?
 
-Open Question 53 Answer:
+Open Question 53 Answer: Yes, users should be allowed to edit the date of a saved transaction after it has been created
 
 Open question 54: Should every delete action require typing a confirmation word, or is a normal confirmation dialog enough?
 
-Open Question 54 Answer:
+Open Question 54 Answer: every delete action is a normal confirmation dialog enough
 
 Open question 55: Should the system keep an audit log for deleted transactions and stock load changes?
 
-Open Question 55 Answer:
+Open Question 55 Answer: No, the system shouldn't keep an audit log for deleted transactions and stock load changes
 
 ## 15. Cash Memo
 
@@ -502,19 +502,19 @@ Open Question 58 Answer: Yes, the memo should show shop information at the top c
 
 Open question 59: Should cash memos be saved as records after printing, or generated only when needed without storing memo history?
 
-Open Question 59 Answer:
+Open Question 59 Answer: cash memos should be generated only when needed without storing memo history.
 
 Open question 60: Should cash memo numbers be generated automatically?
 
-Open Question 60 Answer:
+Open Question 60 Answer: cash memo numbers should be generated automatically
 
 Open question 61: Should cash memo numbers reset yearly, monthly, or never reset?
 
-Open Question 61 Answer:
+Open Question 61 Answer: cash memo numbers should reset yearly.
 
 Open question 62: Should printed cash memos include the logged-in user's name as the prepared-by person?
 
-Open Question 62 Answer:
+Open Question 62 Answer: No, printed cash memos shouldn't include the logged-in user's name
 
 ## 16. Product Store Details
 
@@ -541,7 +541,7 @@ Open Question 65 Answer: It should only support rod and cement.
 
 Open question 66: Should pending rod and cement sales reserve stock, or should stock only reduce after delivery is marked Completed?
 
-Open Question 66 Answer:
+Open Question 66 Answer: stock should only reduce after delivery is marked Completed
 
 ## 17. Rod Store Details
 
@@ -856,7 +856,7 @@ Open Question 99 Answer: yes, backup files should include the backup date in the
 
 Open question 100: Should backup and restore include archived clients and deleted transaction history if audit logs are added later?
 
-Open Question 100 Answer:
+Open Question 100 Answer: No, backup and restore shouldn't include archived clients and deleted transaction history
 
 ## 28. Data Restore
 
@@ -940,4 +940,4 @@ Open Question 109 Answer: yes, printable pages should use a different cleaner pr
 
 Open question 110: Should currency values always show the Taka symbol, or should they display plain numbers with field labels?
 
-Open Question 110 Answer:
+Open Question 110 Answer: currency values should always show the Taka symbol
