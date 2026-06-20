@@ -56,6 +56,18 @@
               <form id="edit-cement-form">
                 <div class="row g-3">
                   <div class="col-12 col-md-6">
+                    <label for="purchase-date" class="form-label">
+                      Purchase date
+                    </label>
+                    <input
+                      type="date"
+                      class="form-control form-control-lg"
+                      id="purchase-date"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-12 col-md-6">
                     <label for="cement-brand" class="form-label"
                       >cement brand</label
                     >
@@ -193,7 +205,15 @@
       crossorigin="anonymous"
     ></script>
     <script>
+      const today = new Date();
+      const localToday = new Date(
+        today.getTime() - today.getTimezoneOffset() * 60_000,
+      )
+        .toISOString()
+        .split("T")[0];
+
       const defaultCementData = {
+        purchaseDate: localToday,
         cementBrand: "Seven Rings",
         pricePerPacket: "450",
         cementCategory: "BM",
@@ -208,6 +228,8 @@
         localStorage.getItem("shopCementData") || "{}",
       );
 
+      document.getElementById("purchase-date").value =
+        cementData.purchaseDate || defaultCementData.purchaseDate;
       document.getElementById("cement-brand").value =
         cementData.cementBrand || defaultCementData.cementBrand;
       document.getElementById("price-per-packet").value =
@@ -233,6 +255,7 @@
           event.preventDefault();
 
           const updatedCementData = {
+            purchaseDate: document.getElementById("purchase-date").value,
             cementBrand: document.getElementById("cement-brand").value,
             pricePerPacket: document.getElementById("price-per-packet").value,
             cementCategory: document.getElementById("cement-category").value,

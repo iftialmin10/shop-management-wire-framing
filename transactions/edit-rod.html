@@ -52,6 +52,18 @@
               <form id="transaction-form">
                 <div class="row g-3">
                   <div class="col-12 col-md-6">
+                    <label for="purchase-date" class="form-label">
+                      Purchase date
+                    </label>
+                    <input
+                      type="date"
+                      class="form-control form-control-lg"
+                      id="purchase-date"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-12 col-md-6">
                     <label for="rod-brand" class="form-label">Rod brand</label>
                     <select class="form-select form-select-lg" id="rod-brand">
                       <option selected>BSRM</option>
@@ -192,11 +204,24 @@
     ></script>
     <script>
       const transactionForm = document.getElementById("transaction-form");
+      const storedTransactionData = JSON.parse(
+        localStorage.getItem("shopTransactionData") || "{}",
+      );
+      const today = new Date();
+      const localToday = new Date(
+        today.getTime() - today.getTimezoneOffset() * 60_000,
+      )
+        .toISOString()
+        .split("T")[0];
+
+      document.getElementById("purchase-date").value =
+        storedTransactionData.purchaseDate || localToday;
 
       transactionForm.addEventListener("submit", (event) => {
         event.preventDefault();
 
         const transactionData = {
+          purchaseDate: document.getElementById("purchase-date").value,
           rSize: document.getElementById("r-size").value,
           pricePerTon: document.getElementById("price-per-ton").value,
           totalWeight: document.getElementById("total-weight").value,

@@ -267,6 +267,7 @@ Open Question 32 Answer: transaction descriptions should be auto-generated for r
 
 The Rod Selection page collects rod purchase information in one bordered input group. It includes:
 
+- Purchase date
 - R-brand
 - R-size
 - Price/Kg
@@ -305,6 +306,7 @@ Open Question 36 Answer: Yes, the system should prevent saving rod or cement sal
 
 The Cement Selection page collects cement purchase information in two bordered input groups. Each group includes:
 
+- Purchase date
 - CementBrand
 - price/bag
 - Cement category
@@ -420,9 +422,9 @@ The system provides editing pages for:
 - Misc Expense
 - Misc Payment To Client
 
-Edit Rod Expense includes rod brand, R-size, price/kg, total weight, total cost, other expenses, other expense cost, cost, delivery status, Delete, and Save changes.
+Edit Rod Expense includes purchase date, rod brand, R-size, price/kg, total weight, total cost, other expenses, other expense cost, cost, delivery status, Delete, and Save changes.
 
-Edit Cement Expense includes cement brand, price/bag, cement category, total cement bag, total price, other expense, other expense cost, cost, delivery status, Delete, and Save changes.
+Edit Cement Expense includes purchase date, cement brand, price/bag, cement category, total cement bag, total price, other expense, other expense cost, cost, delivery status, Delete, and Save changes.
 
 Edit Deposit includes date, description, taka, Delete, and Save changes.
 

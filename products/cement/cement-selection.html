@@ -58,6 +58,17 @@
                 <div class="input-box p-3 p-md-4 mb-4">
                   <div class="row g-3">
                     <div class="col-12 col-md-6">
+                      <label for="purchase-date" class="form-label">
+                        Purchase date
+                      </label>
+                      <input
+                        type="date"
+                        class="form-control purchase-date"
+                        id="purchase-date"
+                        required
+                      />
+                    </div>
+                    <div class="col-12 col-md-6">
                       <label for="cement-brand" class="form-label">
                         CementBrand
                       </label>
@@ -151,6 +162,17 @@
 
                 <div class="input-box p-3 p-md-4">
                   <div class="row g-3">
+                    <div class="col-12 col-md-6">
+                      <label for="purchase-date-2" class="form-label">
+                        Purchase date
+                      </label>
+                      <input
+                        type="date"
+                        class="form-control purchase-date"
+                        id="purchase-date-2"
+                        required
+                      />
+                    </div>
                     <div class="col-12 col-md-6">
                       <label for="cement-brand-2" class="form-label">
                         CementBrand
@@ -273,6 +295,17 @@
       crossorigin="anonymous"
     ></script>
     <script>
+      const today = new Date();
+      const localToday = new Date(
+        today.getTime() - today.getTimezoneOffset() * 60_000,
+      )
+        .toISOString()
+        .split("T")[0];
+
+      document.querySelectorAll(".purchase-date").forEach((dateInput) => {
+        dateInput.value = localToday;
+      });
+
       document
         .getElementById("cement-selection-form")
         .addEventListener("submit", (event) => {
