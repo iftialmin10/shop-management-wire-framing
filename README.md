@@ -422,9 +422,9 @@ The system provides editing pages for:
 - Misc Expense
 - Misc Payment To Client
 
-Edit Rod Expense includes purchase date, rod brand, R-size, price/kg, total weight, total cost, other expenses, other expense cost, cost, delivery status, Delete, and Save changes.
+Edit Rod Expense includes purchase date, rod brand, R-size, price/kg, total weight, total cost, other expenses, other expense cost, cost, delivery status, delivery date, Delete, and Save changes.
 
-Edit Cement Expense includes purchase date, cement brand, price/bag, cement category, total cement bag, total price, other expense, other expense cost, cost, delivery status, Delete, and Save changes.
+Edit Cement Expense includes purchase date, cement brand, price/bag, cement category, total cement bag, total price, other expense, other expense cost, cost, delivery status, delivery date, Delete, and Save changes.
 
 Edit Deposit includes date, description, taka, Delete, and Save changes.
 
@@ -580,9 +580,11 @@ Open Question 69 Answer: Yes, the table should support filtering by brand or siz
 
 The Load Rod page adds rod stock. It includes:
 
+- Load date
 - R-size
 - Brand
 - Load Weight
+- Load price
 - Cancel action
 - Save action
 
@@ -644,6 +646,7 @@ The Edit Loaded Rod page allows the user to update or delete a rod load stock hi
 - Date
 - Static status value: load
 - Weight
+- Load price
 - Delete action
 - Save action
 - Back action to Rod Stock
@@ -699,9 +702,11 @@ Open Question 81 Answer: Yes, if later on more cement brands are added then the 
 
 The Load Cement page adds cement stock. It includes:
 
+- Load date
 - Brand-name
 - Categories
 - Load amount
+- Load price
 - Cancel action
 - Save action
 
@@ -763,6 +768,7 @@ The Edit Stored Cement page allows the user to update or delete a cement load st
 - Date
 - Static status value: load
 - Remaining
+- Load price
 - Delete action
 - Save action
 - Back action to Cement Stock

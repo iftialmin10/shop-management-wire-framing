@@ -163,8 +163,8 @@
                       readonly
                     />
                   </div>
-                  <div class="col-12">
-                    <div class="form-check form-switch">
+                  <div class="col-12 col-md-6 d-flex align-items-end">
+                    <div class="form-check form-switch mb-2">
                       <input
                         class="form-check-input"
                         type="checkbox"
@@ -175,6 +175,16 @@
                         Delivery Status
                       </label>
                     </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="delivery-date" class="form-label">
+                      Delivery date
+                    </label>
+                    <input
+                      type="date"
+                      class="form-control form-control-lg"
+                      id="delivery-date"
+                    />
                   </div>
                 </div>
 
@@ -214,6 +224,7 @@
 
       const defaultCementData = {
         purchaseDate: localToday,
+        deliveryDate: localToday,
         cementBrand: "Seven Rings",
         pricePerPacket: "450",
         cementCategory: "BM",
@@ -230,6 +241,8 @@
 
       document.getElementById("purchase-date").value =
         cementData.purchaseDate || defaultCementData.purchaseDate;
+      document.getElementById("delivery-date").value =
+        cementData.deliveryDate || defaultCementData.deliveryDate;
       document.getElementById("cement-brand").value =
         cementData.cementBrand || defaultCementData.cementBrand;
       document.getElementById("price-per-packet").value =
@@ -256,6 +269,7 @@
 
           const updatedCementData = {
             purchaseDate: document.getElementById("purchase-date").value,
+            deliveryDate: document.getElementById("delivery-date").value,
             cementBrand: document.getElementById("cement-brand").value,
             pricePerPacket: document.getElementById("price-per-packet").value,
             cementCategory: document.getElementById("cement-category").value,

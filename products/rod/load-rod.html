@@ -66,6 +66,29 @@
                       value="200kg"
                     />
                   </div>
+                  <div class="col-12 col-md-6">
+                    <label for="load-date" class="form-label">Load date</label>
+                    <input
+                      type="date"
+                      class="form-control form-control-lg"
+                      id="load-date"
+                      required
+                    />
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="load-price" class="form-label">
+                      Load price (৳)
+                    </label>
+                    <input
+                      type="number"
+                      class="form-control form-control-lg"
+                      id="load-price"
+                      min="0"
+                      step="0.01"
+                      value="240000"
+                      required
+                    />
+                  </div>
                 </div>
 
                 <div class="d-flex justify-content-end align-items-center gap-2 mt-4">
@@ -93,6 +116,15 @@
       crossorigin="anonymous"
     ></script>
     <script>
+      const today = new Date();
+      const localToday = new Date(
+        today.getTime() - today.getTimezoneOffset() * 60_000,
+      )
+        .toISOString()
+        .split("T")[0];
+
+      document.getElementById("load-date").value = localToday;
+
       document
         .getElementById("load-rod-form")
         .addEventListener("submit", (event) => {

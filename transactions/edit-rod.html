@@ -161,8 +161,8 @@
                       readonly
                     />
                   </div>
-                  <div class="col-12">
-                    <div class="form-check form-switch">
+                  <div class="col-12 col-md-6 d-flex align-items-end">
+                    <div class="form-check form-switch mb-2">
                       <input
                         class="form-check-input"
                         type="checkbox"
@@ -173,6 +173,16 @@
                         Delivery Status
                       </label>
                     </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="delivery-date" class="form-label">
+                      Delivery date
+                    </label>
+                    <input
+                      type="date"
+                      class="form-control form-control-lg"
+                      id="delivery-date"
+                    />
                   </div>
                 </div>
 
@@ -216,12 +226,15 @@
 
       document.getElementById("purchase-date").value =
         storedTransactionData.purchaseDate || localToday;
+      document.getElementById("delivery-date").value =
+        storedTransactionData.deliveryDate || localToday;
 
       transactionForm.addEventListener("submit", (event) => {
         event.preventDefault();
 
         const transactionData = {
           purchaseDate: document.getElementById("purchase-date").value,
+          deliveryDate: document.getElementById("delivery-date").value,
           rSize: document.getElementById("r-size").value,
           pricePerTon: document.getElementById("price-per-ton").value,
           totalWeight: document.getElementById("total-weight").value,
